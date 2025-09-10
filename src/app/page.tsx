@@ -40,9 +40,9 @@ export default function Home() {
       <section id="about" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">About Calabar Tech Community</h2>
-              <p className="mt-4 text-muted-foreground">
+            <div className="text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-center">About Calabar Tech Community</h2>
+              <p className="mt-4 text-muted-foreground text-center">
                 Calabar Tech Community is a dynamic and inclusive ecosystem for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We are committed to fostering innovation, collaboration, and growth within the local tech landscape.
               </p>
               <div className="mt-6 space-y-4">
@@ -74,7 +74,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-                 <div className="text-left mt-8">
+                 <div className="text-center mt-8">
                     <Button asChild variant="outline">
                       <Link href="/about">Learn More About Us</Link>
                     </Button>
@@ -136,9 +136,9 @@ export default function Home() {
                  </div>
                 <div className="w-full md:w-2/3">
                   <CardHeader>
-                    <CardTitle className="font-headline">{project.title}</CardTitle>
+                    <CardTitle className="font-headline text-center">{project.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="text-center">
                     <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                     <Button asChild variant="link" className="p-0">
                       <Link href="/projects">
@@ -188,10 +188,10 @@ export default function Home() {
             </p>
           </div>
           <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-2 space-y-8">
-              <h3 className="text-2xl font-headline font-semibold">Contact Information</h3>
+            <div className="lg:col-span-2 space-y-8 text-center lg:text-left">
+              <h3 className="text-2xl font-headline font-semibold text-center">Contact Information</h3>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 justify-center lg:justify-start">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                     <MapPin className="h-6 w-6" />
                   </div>
@@ -200,7 +200,7 @@ export default function Home() {
                     <p className="text-muted-foreground">Calabar, Nigeria</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 justify-center lg:justify-start">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                     <Mail className="h-6 w-6" />
                   </div>
@@ -209,7 +209,7 @@ export default function Home() {
                     <p className="text-muted-foreground">hello@calabartechcommunity.com</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 justify-center lg:justify-start">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                     <Phone className="h-6 w-6" />
                   </div>
@@ -219,14 +219,14 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-                <div className="text-left mt-8">
+                <div className="text-center mt-8">
                     <Button asChild variant="outline">
                       <Link href="/contact">Send a Message</Link>
                     </Button>
                 </div>
             </div>
             <div className="lg:col-span-3">
-              <h3 className="text-2xl font-headline font-semibold mb-8">Send Us a Message</h3>
+              <h3 className="text-2xl font-headline font-semibold mb-8 text-center">Send Us a Message</h3>
               <ContactForm />
             </div>
           </div>

@@ -23,18 +23,18 @@ export default function AboutPage() {
                 className="object-cover"
             />
           </div>
-          <div>
-            <h2 className="text-3xl font-headline font-semibold mb-4">Our Mission</h2>
-            <p className="text-muted-foreground leading-relaxed">
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-headline font-semibold mb-4 text-center">Our Mission</h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
               To cultivate a vibrant and inclusive tech ecosystem in Calabar by providing a platform for knowledge sharing, collaboration, and professional growth. We aim to empower individuals with the skills and network they need to thrive in the digital age and contribute to solving local and global challenges.
             </p>
           </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-           <div className="order-2 md:order-1">
-            <h2 className="text-3xl font-headline font-semibold mb-4">Our Vision</h2>
-            <p className="text-muted-foreground leading-relaxed">
+           <div className="order-2 md:order-1 text-center md:text-left">
+            <h2 className="text-3xl font-headline font-semibold mb-4 text-center">Our Vision</h2>
+            <p className="text-muted-foreground leading-relaxed text-center">
               We envision Calabar as a recognized hub for technological innovation in Nigeria and beyond. A city where tech talent is nurtured, startups are born and scaled, and technology is leveraged as a primary driver for sustainable economic development and social progress.
             </p>
           </div>
