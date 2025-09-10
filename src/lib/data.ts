@@ -95,7 +95,7 @@ const events: Event[] = [
         time: '6:00 PM Fri - 6:00 PM Sun',
         location: 'University of Calabar',
         shortDescription: 'A 48-hour coding marathon to build solutions for problems facing our local community.',
-        description: 'The Calabar Tech Hub Annual Hackathon is here! Form a team, pick a challenge, and build an innovative solution in just 48 hours. We have tracks for education, healthcare, and environmental sustainability. Prizes will be awarded to the top three teams. Mentors from leading tech companies will be available to guide you. Food, drinks, and plenty of coffee will be provided.',
+        description: 'The Calabar Tech Community Annual Hackathon is here! Form a team, pick a challenge, and build an innovative solution in just 48 hours. We have tracks for education, healthcare, and environmental sustainability. Prizes will be awarded to the top three teams. Mentors from leading tech companies will be available to guide you. Food, drinks, and plenty of coffee will be provided.',
         imageUrl: 'https://picsum.photos/seed/event4/600/400',
         imageHint: 'hackathon code',
         speakers: [],

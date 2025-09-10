@@ -21,7 +21,7 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2">
       <Mountain className="h-6 w-6 text-primary" />
-      <span className="font-headline text-lg font-semibold">Calabar Tech Hub</span>
+      <span className="font-headline text-lg font-semibold">Calabar Tech Community</span>
     </Link>
   );
 }

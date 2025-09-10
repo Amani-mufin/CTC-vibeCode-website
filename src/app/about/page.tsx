@@ -6,7 +6,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <div className="flex flex-col items-center text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-primary">
-            About Calabar Tech Hub
+            About Calabar Tech Community
           </h1>
           <p className="mt-3 max-w-3xl text-lg text-muted-foreground">
             We are a passionate community of innovators, learners, and builders, united by our love for technology and our commitment to Calabar.

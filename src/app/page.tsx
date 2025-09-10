@@ -16,7 +16,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <div className="container mx-auto px-4 md:px-6 text-center relative">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter text-primary">
-            Welcome to Calabar Tech Hub
+            Welcome to Calabar Tech Community
           </h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
             The heart of technology and innovation in Calabar, Nigeria. Join us to learn, build, and grow together.
@@ -152,4 +152,3 @@ export default function Home() {
     </div>
   );
 }
-
