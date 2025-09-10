@@ -24,7 +24,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Our Location</h3>
-                  <p className="text-muted-foreground">Co-Creation Hub, Calabar, Cross River State, Nigeria</p>
+                  <p className="text-muted-foreground">Calabar, Nigeria</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email Us</h3>
-                  <p className="text-muted-foreground">hello@calabarthub.com</p>
+                  <p className="text-muted-foreground">hello@calabartechcommunity.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Call Us</h3>
-                  <p className="text-muted-foreground">+234 (123) 456-7890</p>
+                  <p className="text-muted-foreground">+234 812 345 6789</p>
                 </div>
               </div>
             </div>

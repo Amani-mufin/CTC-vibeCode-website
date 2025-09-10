@@ -9,7 +9,7 @@ export default function AboutPage() {
             About Calabar Tech Community
           </h1>
           <p className="mt-3 max-w-3xl text-lg text-muted-foreground">
-            We are a passionate community of innovators, learners, and builders, united by our love for technology and our commitment to Calabar.
+            We are a dynamic and inclusive ecosystem for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We are committed to fostering innovation, collaboration, and growth within the local tech landscape.
           </p>
         </div>
 
@@ -50,23 +50,23 @@ export default function AboutPage() {
         </div>
 
         <div>
-            <h2 className="text-3xl font-headline font-semibold text-center mb-8">Our Values</h2>
+            <h2 className="text-3xl font-headline font-semibold text-center mb-8">What We Do</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center p-6 bg-card rounded-lg">
-                    <h3 className="text-xl font-headline mb-2 text-primary">Collaboration</h3>
+                    <h3 className="text-xl font-headline mb-2 text-primary">Community</h3>
                     <p className="text-sm text-muted-foreground">We believe in the power of working together. Great things happen when we share ideas and support one another.</p>
                 </div>
                  <div className="text-center p-6 bg-card rounded-lg">
-                    <h3 className="text-xl font-headline mb-2 text-primary">Inclusivity</h3>
-                    <p className="text-sm text-muted-foreground">Everyone is welcome. We are committed to creating a safe and respectful environment for all, regardless of background or skill level.</p>
+                    <h3 className="text-xl font-headline mb-2 text-primary">Events</h3>
+                    <p className="text-sm text-muted-foreground">We host a variety of events, from workshops to hackathons, to bring the community together and foster learning.</p>
                 </div>
                  <div className="text-center p-6 bg-card rounded-lg">
-                    <h3 className="text-xl font-headline mb-2 text-primary">Continuous Learning</h3>
-                    <p className="text-sm text-muted-foreground">The tech world is always evolving, and so are we. We encourage curiosity and a passion for lifelong learning.</p>
+                    <h3 className="text-xl font-headline mb-2 text-primary">Mentorship</h3>
+                    <p className="text-sm text-muted-foreground">We connect aspiring tech professionals with experienced mentors to guide them on their career journey.</p>
                 </div>
                  <div className="text-center p-6 bg-card rounded-lg">
-                    <h3 className="text-xl font-headline mb-2 text-primary">Community Impact</h3>
-                    <p className="text-sm text-muted-foreground">We strive to use our skills and knowledge to make a positive impact on our local community in Calabar.</p>
+                    <h3 className="text-xl font-headline mb-2 text-primary">Projects</h3>
+                    <p className="text-sm text-muted-foreground">We encourage and facilitate collaborative projects that solve real-world problems and drive innovation.</p>
                 </div>
             </div>
         </div>

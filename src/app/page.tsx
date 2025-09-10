@@ -61,7 +61,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl md:text-4xl font-headline font-bold">About Calabar Tech Community</h2>
               <p className="mt-4 text-muted-foreground">
-                Calabar Tech Community is a thriving ecosystem of developers, designers, and tech enthusiasts dedicated to fostering innovation and collaboration in Calabar. Our mission is to provide a platform for learning, networking, and building amazing things.
+                Calabar Tech Community is a dynamic and inclusive ecosystem for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We are committed to fostering innovation, collaboration, and growth within the local tech landscape.
               </p>
               <div className="mt-6 space-y-4">
                 <div className="flex items-start gap-4">
