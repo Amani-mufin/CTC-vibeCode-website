@@ -8,6 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Mountain } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import React from 'react';
+import { ModeToggle } from '@/components/mode-toggle';
 
 const navLinks = [
   { href: '/#about', label: 'About' },
@@ -62,53 +63,55 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Logo />
 
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {links.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-               onClick={(e) => handleLinkClick(e, href)}
-              className={cn(
-                'transition-colors hover:text-light-gold',
-                pathname === href ? 'text-primary' : 'text-muted-foreground'
-              )}
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="md:hidden">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-              <div className="flex flex-col h-full">
-                <div className="border-b pb-4">
-                  <Logo />
+        <div className="flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                 onClick={(e) => handleLinkClick(e, href)}
+                className={cn(
+                  'transition-colors hover:text-light-gold',
+                  pathname === href ? 'text-primary' : 'text-muted-foreground'
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+          <ModeToggle />
+          <div className="md:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle navigation menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left">
+                <div className="flex flex-col h-full">
+                  <div className="border-b pb-4">
+                    <Logo />
+                  </div>
+                  <nav className="flex flex-col gap-4 mt-8">
+                    {links.map(({ href, label }) => (
+                      <Link
+                        key={href}
+                        href={href}
+                        onClick={(e) => handleLinkClick(e, href)}
+                        className={cn(
+                          'text-lg font-medium transition-colors hover:text-light-gold',
+                          pathname === href ? 'text-primary' : 'text-muted-foreground'
+                        )}
+                      >
+                        {label}
+                      </Link>
+                    ))}
+                  </nav>
                 </div>
-                <nav className="flex flex-col gap-4 mt-8">
-                  {links.map(({ href, label }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      onClick={(e) => handleLinkClick(e, href)}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-light-gold',
-                        pathname === href ? 'text-primary' : 'text-muted-foreground'
-                      )}
-                    >
-                      {label}
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
