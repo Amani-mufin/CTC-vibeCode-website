@@ -15,10 +15,10 @@ export default function ContactPage() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2 space-y-8 text-center lg:text-left">
+          <div className="lg:col-span-2 space-y-8">
             <h2 className="text-2xl font-headline font-semibold text-center">Contact Information</h2>
             <div className="space-y-6">
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
+              <div className="flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                   <MapPin className="h-6 w-6" />
                 </div>
@@ -27,7 +27,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground">Calabar, Nigeria</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
+              <div className="flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                   <Mail className="h-6 w-6" />
                 </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
                   <p className="text-muted-foreground">hello@calabartechcommunity.com</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 justify-center lg:justify-start">
+              <div className="flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
                   <Phone className="h-6 w-6" />
                 </div>
