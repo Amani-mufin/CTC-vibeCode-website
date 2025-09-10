@@ -7,6 +7,7 @@ import { getEvents, getProjects, getTeamMembers } from '@/lib/data';
 import EventCard from '@/components/event-card';
 import TeamMemberCard from '@/components/team-member-card';
 import { ContactForm } from '@/components/contact-form';
+import { ScrollAnimation } from '@/components/scroll-animation';
 
 export default function Home() {
   const featuredEvents = getEvents().slice(0, 3);
@@ -17,6 +18,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+        <ScrollAnimation>
         <div className="container mx-auto px-4 md:px-6 text-center relative">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter text-primary">
             Welcome to Calabar Tech Community
@@ -35,8 +37,10 @@ export default function Home() {
             </Button>
           </div>
         </div>
+        </ScrollAnimation>
       </section>
 
+      <ScrollAnimation>
       <section id="about" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -92,7 +96,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
 
+      <ScrollAnimation animation="fade-in-up">
       <section id="events" className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
@@ -113,7 +119,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      </ScrollAnimation>
+      
+       <ScrollAnimation animation="fade-in-up">
        <section id="projects" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
@@ -157,7 +165,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
 
+      <ScrollAnimation animation="fade-in-up">
       <section id="team" className="py-16 md:py-24 bg-card">
         <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
@@ -178,7 +188,9 @@ export default function Home() {
             </div>
         </div>
       </section>
+      </ScrollAnimation>
 
+      <ScrollAnimation animation="fade-in-up">
       <section id="contact" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
@@ -232,6 +244,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollAnimation>
     </div>
   );
 }
