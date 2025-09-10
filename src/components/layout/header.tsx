@@ -10,12 +10,20 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const navLinks = [
+  { href: '/#about', label: 'About' },
+  { href: '/#events', label: 'Events' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#team', label: 'Team' },
+  { href: '/#contact', label: 'Contact' },
+];
+
+const pageLinks = [
+  { href: '/about', label: 'About' },
   { href: '/events', label: 'Events' },
   { href: '/projects', label: 'Projects' },
   { href: '/team', label: 'Team' },
-  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
-];
+]
 
 function Logo() {
   return (
@@ -30,16 +38,36 @@ export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
 
+  const isOnePage = pathname === '/';
+
+  const links = isOnePage ? navLinks : pageLinks.map(l => ({...l, href: l.href.startsWith('/') ? l.href : `/${l.href}`}));
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (isOnePage && href.startsWith('/#')) {
+      e.preventDefault();
+      const targetId = href.substring(2);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsOpen(false);
+    } else {
+        setIsOpen(false);
+    }
+  };
+
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Logo />
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {navLinks.map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
+               onClick={(e) => handleLinkClick(e, href)}
               className={cn(
                 'transition-colors hover:text-light-gold',
                 pathname === href ? 'text-primary' : 'text-muted-foreground'
@@ -64,11 +92,11 @@ export function Header() {
                   <Logo />
                 </div>
                 <nav className="flex flex-col gap-4 mt-8">
-                  {navLinks.map(({ href, label }) => (
+                  {links.map(({ href, label }) => (
                     <Link
                       key={href}
                       href={href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={(e) => handleLinkClick(e, href)}
                       className={cn(
                         'text-lg font-medium transition-colors hover:text-light-gold',
                         pathname === href ? 'text-primary' : 'text-muted-foreground'

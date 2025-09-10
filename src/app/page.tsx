@@ -2,13 +2,16 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calendar, Code, Users } from 'lucide-react';
-import { getEvents, getProjects } from '@/lib/data';
+import { ArrowRight, Calendar, Code, Mail, MapPin, Phone, Users } from 'lucide-react';
+import { getEvents, getProjects, getTeamMembers } from '@/lib/data';
 import EventCard from '@/components/event-card';
+import TeamMemberCard from '@/components/team-member-card';
+import { ContactForm } from '@/components/contact-form';
 
 export default function Home() {
   const featuredEvents = getEvents().slice(0, 3);
   const featuredProjects = getProjects().slice(0, 2);
+  const featuredMembers = getTeamMembers().slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -23,39 +26,18 @@ export default function Home() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="/events">
+              <Link href="/#events">
                 Explore Events <ArrowRight className="ml-2" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
-              <Link href="/about">About Us</Link>
+              <Link href="/#about">About Us</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      <section id="events" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Featured Events</h2>
-            <p className="mt-3 max-w-2xl text-muted-foreground">
-              Check out some of our exciting upcoming events.
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {featuredEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button asChild variant="outline">
-              <Link href="/events">View All Events</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="py-16 md:py-24 bg-card">
+      <section id="about" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -92,6 +74,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+                 <div className="text-left mt-8">
+                    <Button asChild variant="outline">
+                      <Link href="/about">Learn More About Us</Link>
+                    </Button>
+                </div>
             </div>
             <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
                 <Image
@@ -102,6 +89,27 @@ export default function Home() {
                   className="object-cover"
                 />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events" className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Featured Events</h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Check out some of our exciting upcoming events.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {featuredEvents.map((event) => (
+              <EventCard key={event.id} event={event} />
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild variant="outline">
+              <Link href="/events">View All Events</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -146,6 +154,81 @@ export default function Home() {
             <Button asChild variant="outline">
               <Link href="/projects">Explore All Projects</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="py-16 md:py-24 bg-card">
+        <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Meet the Team</h2>
+                <p className="mt-3 max-w-2xl text-muted-foreground">
+                    The dedicated individuals making the Calabar Tech Community a reality.
+                </p>
+            </div>
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                {featuredMembers.map((member) => (
+                    <TeamMemberCard key={member.id} member={member} />
+                ))}
+            </div>
+            <div className="text-center mt-12">
+                <Button asChild variant="outline">
+                  <Link href="/team">See Full Team</Link>
+                </Button>
+            </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Get In Touch</h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Have a question, suggestion, or partnership proposal? We&apos;d love to hear from you.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-5 gap-12">
+            <div className="lg:col-span-2 space-y-8">
+              <h3 className="text-2xl font-headline font-semibold">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+                    <MapPin className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Our Location</h4>
+                    <p className="text-muted-foreground">Calabar, Nigeria</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+                    <Mail className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Email Us</h4>
+                    <p className="text-muted-foreground">hello@calabartechcommunity.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+                    <Phone className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Call Us</h4>
+                    <p className="text-muted-foreground">+234 812 345 6789</p>
+                  </div>
+                </div>
+              </div>
+                <div className="text-left mt-8">
+                    <Button asChild variant="outline">
+                      <Link href="/contact">Send a Message</Link>
+                    </Button>
+                </div>
+            </div>
+            <div className="lg:col-span-3">
+              <h3 className="text-2xl font-headline font-semibold mb-8">Send Us a Message</h3>
+              <ContactForm />
+            </div>
           </div>
         </div>
       </section>

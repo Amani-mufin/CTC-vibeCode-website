@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body className={cn('font-body antialiased', inter.variable, spaceGrotesk.variable)}>
         <Header />
         <main className="min-h-[calc(100vh-4rem)]">{children}</main>
