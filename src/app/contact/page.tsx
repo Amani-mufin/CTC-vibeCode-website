@@ -14,9 +14,9 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2 space-y-8">
-            <h2 className="text-2xl font-headline font-semibold text-center">Contact Information</h2>
+        <div className="flex flex-col items-center gap-16">
+          <div className="w-full max-w-2xl">
+            <h2 className="text-2xl font-headline font-semibold text-center mb-8">Contact Information</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
@@ -47,7 +47,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-3">
+          <div className="w-full max-w-2xl">
              <h2 className="text-2xl font-headline font-semibold mb-8 text-center">Send Us a Message</h2>
             <ContactForm />
           </div>

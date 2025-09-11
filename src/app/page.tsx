@@ -199,9 +199,9 @@ export default function Home() {
               Have a question, suggestion, or partnership proposal? We&apos;d love to hear from you.
             </p>
           </div>
-          <div className="grid lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-2 space-y-8">
-              <h3 className="text-2xl font-headline font-semibold text-center">Contact Information</h3>
+           <div className="flex flex-col items-center gap-16">
+            <div className="w-full max-w-2xl">
+              <h3 className="text-2xl font-headline font-semibold text-center mb-8">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
@@ -237,7 +237,7 @@ export default function Home() {
                     </Button>
                 </div>
             </div>
-            <div className="lg:col-span-3">
+            <div className="w-full max-w-2xl">
               <h3 className="text-2xl font-headline font-semibold mb-8 text-center">Send Us a Message</h3>
               <ContactForm />
             </div>
