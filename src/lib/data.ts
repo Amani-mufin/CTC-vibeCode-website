@@ -1,3 +1,4 @@
+
 export interface Speaker {
     name: string;
     title: string;
@@ -159,12 +160,25 @@ const projects: Project[] = [
 
 const teamMembers: TeamMember[] = [
     {
+        id: '7',
+        name: 'Amani Kanu',
+        role: 'Founder',
+        imageUrl: 'https://picsum.photos/seed/team7/400/400',
+        imageHint: 'man founder portrait',
+        bio: 'Amani is the visionary founder of Calabar Tech Community. His passion for technology and community development drives our mission to build a thriving tech ecosystem in Calabar.',
+        social: {
+            linkedin: 'https://www.linkedin.com/in/amani-kanu/',
+            twitter: '#',
+            github: '#'
+        }
+    },
+    {
         id: '1',
         name: 'Amina Yusuf',
         role: 'Community Lead',
         imageUrl: 'https://picsum.photos/seed/team1/400/400',
         imageHint: 'woman portrait',
-        bio: 'Amina is a passionate software engineer and community builder. She founded Calabar Tech Community to create a space for tech enthusiasts to learn and grow together.',
+        bio: 'Amina is a passionate software engineer and community builder. She co-founded Calabar Tech Community to create a space for tech enthusiasts to learn and grow together.',
         social: {
             twitter: '#',
             linkedin: '#',
