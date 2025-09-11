@@ -17,8 +17,14 @@ export default function EventsPage() {
                             Browse our upcoming meetups, workshops, and hackathons. Join us to learn, connect, and innovate.
                         </p>
                     </div>
-                    <div className="relative h-64 md:h-80 w-full">
-                        <Image src="/events-hero.svg" alt="Community Events Illustration" fill className="object-contain" />
+                    <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
+                        <Image 
+                            src="https://picsum.photos/seed/events-hero/600/400" 
+                            alt="Calabar Tech Community members at an event" 
+                            data-ai-hint="tech community"
+                            fill
+                            className="object-cover"
+                        />
                     </div>
                 </div>
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
