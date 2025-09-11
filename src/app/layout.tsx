@@ -11,9 +11,41 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
 
 export const metadata: Metadata = {
-  title: 'Calabar Tech Community',
-  description: 'A modern tech community website for Calabar Tech Community.',
+  metadataBase: new URL('https://calabartechcommunity.com'),
+  title: {
+    default: 'Calabar Tech Community',
+    template: `%s | Calabar Tech Community`,
+  },
+  description: 'The heart of technology and innovation in Calabar, Nigeria. Join us to learn, build, and grow together.',
+  openGraph: {
+    title: 'Calabar Tech Community',
+    description: 'The heart of technology and innovation in Calabar, Nigeria. Join us to learn, build, and grow together.',
+    url: 'https://calabartechcommunity.com',
+    siteName: 'Calabar Tech Community',
+    images: [
+      {
+        url: 'https://picsum.photos/seed/og-image/1200/630',
+        width: 1200,
+        height: 630,
+        alt: 'Calabar Tech Community',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Calabar Tech Community',
+    description: 'The heart of technology and innovation in Calabar, Nigeria. Join us to learn, build, and grow together.',
+    images: ['https://picsum.photos/seed/og-image/1200/630'],
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
 };
+
 
 export default function RootLayout({
   children,
