@@ -11,20 +11,12 @@ import { ModeToggle } from '@/components/mode-toggle';
 import Image from 'next/image';
 
 const navLinks = [
-  { href: '/#about', label: 'About' },
-  { href: '/#events', label: 'Events' },
-  { href: '/#projects', label: 'Projects' },
-  { href: '/#team', label: 'Team' },
-  { href: '/#contact', label: 'Contact' },
-];
-
-const pageLinks = [
   { href: '/about', label: 'About' },
   { href: '/events', label: 'Events' },
   { href: '/projects', label: 'Projects' },
   { href: '/team', label: 'Team' },
   { href: '/contact', label: 'Contact' },
-]
+];
 
 function Logo() {
   return (
@@ -39,30 +31,8 @@ export function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const isOnePage = pathname === '/';
-
-  const links = isOnePage ? navLinks : pageLinks.map(l => ({...l, href: l.href.startsWith('/') ? l.href : `/${l.href}`}));
-
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (isOnePage && href.startsWith('/#')) {
-      e.preventDefault();
-      const targetId = href.substring(2);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        // Correct for the sticky header height
-        const headerOffset = 64; // h-16 = 4rem = 64px
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
-      }
-      setIsOpen(false);
-    } else {
-        setIsOpen(false);
-    }
+  const handleLinkClick = () => {
+    setIsOpen(false);
   };
 
 
@@ -73,14 +43,13 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            {links.map(({ href, label }) => (
+            {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                 onClick={(e) => handleLinkClick(e, href)}
                 className={cn(
                   'transition-colors hover:text-primary',
-                  pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                  pathname.startsWith(href) ? 'text-primary font-semibold' : 'text-muted-foreground'
                 )}
               >
                 {label}
@@ -102,14 +71,14 @@ export function Header() {
                     <Logo />
                   </div>
                   <nav className="flex flex-col gap-4 mt-8">
-                    {links.map(({ href, label }) => (
+                    {navLinks.map(({ href, label }) => (
                       <Link
                         key={href}
                         href={href}
-                        onClick={(e) => handleLinkClick(e, href)}
+                        onClick={handleLinkClick}
                         className={cn(
                           'text-lg font-medium transition-colors hover:text-primary',
-                           pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
+                           pathname.startsWith(href) ? 'text-primary font-semibold' : 'text-muted-foreground'
                         )}
                       >
                         {label}
