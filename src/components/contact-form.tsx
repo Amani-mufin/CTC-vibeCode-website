@@ -19,7 +19,7 @@ const initialState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full">
+    <Button type="submit" disabled={pending} className="w-full" size="lg">
       {pending ? 'Sending...' : 'Send Message'}
     </Button>
   );
@@ -48,27 +48,27 @@ export function ContactForm() {
 
   return (
     <Card>
-      <CardContent className="p-6">
+      <CardContent className="p-6 md:p-8">
         <form ref={formRef} action={dispatch} className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="name">Name</Label>
             <Input id="name" name="name" placeholder="Your Name" required />
-            {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
+            {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name[0]}</p>}
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input id="email" name="email" type="email" placeholder="your@email.com" required />
-            {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
+            {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email[0]}</p>}
           </div>
           <div className="space-y-2">
             <Label htmlFor="subject">Subject</Label>
             <Input id="subject" name="subject" placeholder="What is this about?" required />
-            {state.errors?.subject && <p className="text-sm text-destructive">{state.errors.subject[0]}</p>}
+            {state.errors?.subject && <p className="text-sm text-destructive mt-1">{state.errors.subject[0]}</p>}
           </div>
           <div className="space-y-2">
             <Label htmlFor="message">Message</Label>
             <Textarea id="message" name="message" placeholder="Your message here..." rows={5} required />
-            {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message[0]}</p>}
+            {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>}
           </div>
           <SubmitButton />
         </form>

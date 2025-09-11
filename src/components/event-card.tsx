@@ -1,10 +1,10 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Event } from '@/lib/data';
 import { ArrowRight, Calendar, MapPin } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 interface EventCardProps {
   event: Event;
@@ -12,9 +12,10 @@ interface EventCardProps {
 
 export default function EventCard({ event }: EventCardProps) {
   const eventDate = new Date(event.date);
+  const isUpcoming = eventDate > new Date();
 
   return (
-    <Card className="flex flex-col overflow-hidden group hover:border-primary/50 transition-colors duration-300">
+    <Card className="flex flex-col overflow-hidden group border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
       <div className="relative h-48 w-full overflow-hidden">
         <Image
           src={event.imageUrl}
@@ -23,25 +24,26 @@ export default function EventCard({ event }: EventCardProps) {
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        {isUpcoming && <Badge className="absolute top-3 right-3">Upcoming</Badge>}
       </div>
       <CardHeader>
-        <CardTitle className="font-headline text-xl group-hover:text-primary transition-colors">
-          <Link href={`/events/${event.id}`}>{event.title}</Link>
+        <CardTitle className="font-headline text-xl h-14">
+          <Link href={`/events/${event.id}`} className="hover:text-primary transition-colors">{event.title}</Link>
         </CardTitle>
       </CardHeader>
-      <CardContent className="flex-grow">
-        <div className="flex items-center text-sm text-muted-foreground mb-2">
-          <Calendar className="mr-2 h-4 w-4" />
+      <CardContent className="flex-grow space-y-3">
+        <div className="flex items-center text-sm text-muted-foreground">
+          <Calendar className="mr-2 h-4 w-4 shrink-0" />
           <span>{eventDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
         </div>
-        <div className="flex items-center text-sm text-muted-foreground mb-4">
-          <MapPin className="mr-2 h-4 w-4" />
+        <div className="flex items-center text-sm text-muted-foreground">
+          <MapPin className="mr-2 h-4 w-4 shrink-0" />
           <span>{event.location}</span>
         </div>
-        <p className="text-sm text-muted-foreground">{event.shortDescription}</p>
+        <p className="text-sm text-muted-foreground pt-2">{event.shortDescription}</p>
       </CardContent>
-      <CardFooter>
-        <Button asChild variant="link" className="p-0">
+      <CardFooter className="bg-card">
+        <Button asChild variant="secondary" className="w-full">
           <Link href={`/events/${event.id}`}>
             View Details <ArrowRight className="ml-2 h-4 w-4" />
           </Link>

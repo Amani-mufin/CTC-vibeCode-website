@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -49,7 +48,15 @@ export function Header() {
       const targetId = href.substring(2);
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+        // Correct for the sticky header height
+        const headerOffset = 64; // h-16 = 4rem = 64px
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
       }
       setIsOpen(false);
     } else {
@@ -71,8 +78,8 @@ export function Header() {
                 href={href}
                  onClick={(e) => handleLinkClick(e, href)}
                 className={cn(
-                  'transition-colors hover:text-light-gold',
-                  pathname === href ? 'text-primary' : 'text-muted-foreground'
+                  'transition-colors hover:text-primary',
+                  pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
                 )}
               >
                 {label}
@@ -100,8 +107,8 @@ export function Header() {
                         href={href}
                         onClick={(e) => handleLinkClick(e, href)}
                         className={cn(
-                          'text-lg font-medium transition-colors hover:text-light-gold',
-                          pathname === href ? 'text-primary' : 'text-muted-foreground'
+                          'text-lg font-medium transition-colors hover:text-primary',
+                           pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
                         )}
                       >
                         {label}

@@ -1,4 +1,3 @@
-
 export interface Speaker {
     name: string;
     title: string;
@@ -62,11 +61,11 @@ const events: Event[] = [
     },
     {
         id: '2',
-        title: 'Building Modern Web Apps with Next.js',
+        title: 'Building Modern Web Apps with Next.js & Firebase',
         date: '2024-09-05',
         time: '10:00 AM - 4:00 PM',
         location: 'Online Workshop',
-        shortDescription: 'A hands-on workshop on building fast, scalable web applications with Next.js and Vercel.',
+        shortDescription: 'A hands-on workshop on building fast, scalable web applications with Next.js and Firebase.',
         description: 'This full-day workshop will guide you through building a complete web application from scratch using Next.js. We will cover file-based routing, server components, data fetching strategies, and deployment on Vercel. Participants should have a basic understanding of React and JavaScript. Bring your laptops for a hands-on coding session!',
         imageUrl: 'https://picsum.photos/seed/event2/600/400',
         imageHint: 'workshop collaboration',
@@ -115,7 +114,7 @@ const projects: Project[] = [
     },
     {
         id: '2',
-        title: 'Waste Management Analytics Dashboard',
+        title: 'Waste Management Analytics',
         description: 'A web-based platform that visualizes waste collection data across the city, helping to optimize routes and improve efficiency for waste management services.',
         imageUrl: 'https://picsum.photos/seed/project2/600/400',
         imageHint: 'dashboard analytics',
@@ -129,6 +128,32 @@ const projects: Project[] = [
         imageUrl: 'https://picsum.photos/seed/project3/600/400',
         imageHint: 'ecommerce website',
         team: ['Chris Green', 'Patricia White'],
+    },
+     {
+        id: '4',
+        title: 'E-Learning Platform',
+        description: 'An accessible online learning platform offering courses on digital skills, tailored for the youth in our community. Includes video tutorials and quizzes.',
+        imageUrl: 'https://picsum.photos/seed/project4/600/400',
+        imageHint: 'online learning',
+        team: ['Mike Adenuga', 'Fatima Bello'],
+        repoUrl: 'https://github.com/example/elearning'
+    },
+    {
+        id: '5',
+        title: 'Community Health Connect',
+        description: 'A mobile app that connects individuals with local health services and provides reliable health information and emergency contacts.',
+        imageUrl: 'https://picsum.photos/seed/project5/600/400',
+        imageHint: 'health app',
+        team: ['David Okon', 'Grace Bassey'],
+    },
+     {
+        id: '6',
+        title: 'Local Farm Produce Directory',
+        description: 'A simple web directory that lists local farms and their produce, helping consumers buy fresh, locally-sourced food directly from farmers.',
+        imageUrl: 'https://picsum.photos/seed/project6/600/400',
+        imageHint: 'local food',
+        team: ['Samuel Etta', 'Amina Yusuf'],
+        repoUrl: 'https://github.com/example/farm-directory'
     }
 ];
 

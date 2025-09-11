@@ -6,12 +6,12 @@ export default function ProjectsPage() {
 
     return (
         <div className="bg-background">
-            <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
-                <div className="flex flex-col items-center text-center mb-12">
+            <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 lg:py-24">
+                <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                     <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-primary">
                         Community Projects
                     </h1>
-                    <p className="mt-3 max-w-2xl text-lg text-muted-foreground">
+                    <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
                         Discover the innovative solutions being built by members of the Calabar Tech Community.
                     </p>
                 </div>
