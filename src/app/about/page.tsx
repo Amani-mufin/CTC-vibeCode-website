@@ -9,7 +9,7 @@ export default function AboutPage() {
             About Calabar Tech Community
           </h1>
           <p className="mt-4 max-w-3xl text-lg md:text-xl text-muted-foreground">
-            We are a dynamic and inclusive ecosystem for tech enthusiasts, professionals, and learners in Calabar, Nigeria, committed to fostering innovation, collaboration, and growth.
+            Calabar Tech Community is a dynamic and inclusive community for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We are committed to fostering innovation, collaboration, and continuous growth by providing access to mentorship, learning opportunities, networking events, and industry insights. Whether you’re just starting your tech journey or are an experienced professional, you’ll find a supportive community that inspires you to learn, build, and thrive you are welcome.
           </p>
         </div>
 
