@@ -29,8 +29,8 @@ export default function Home() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="/events">
-                Explore Events <ArrowRight className="ml-2" />
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLScy4nFHFFml0N-BN6mxcctqKoqyIF4UwJ1Us-KfLZecn0MpIg/viewform?pli=1" target="_blank" rel="noopener noreferrer">
+                Join Community <ArrowRight className="ml-2" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="secondary">
@@ -196,8 +196,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email Us</h4>
-                    <p className="text-muted-foreground">hello@calabartechcommunity.com</p>
-                  </div>
+                    <p className="text-muted-foreground">hello@calabartechcommunity.com</p>                  </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
