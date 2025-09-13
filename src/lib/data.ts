@@ -193,7 +193,8 @@ const teamMembers: TeamMember[] = [
         imageHint: 'woman professional',
         bio: 'I had always aspired to learn how to code, but had struggled to find the right resources to advance my career until I was introduced to the Calabar Tech Community. Since then, I have been fortunate to benefit from the wealth of knowledge within the community.',
         social: {
-            linkedin: '#',
+            linkedin: 'https://www.linkedin.com/in/florencesarah-arong-egwu',
+            twitter: '#',
         }
     },
     {
