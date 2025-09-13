@@ -156,9 +156,11 @@ export default function Home() {
               Explore our flagship programs designed to inspire and educate.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
+          <div className="grid gap-8 justify-center">
              {featuredPrograms.map((program) => (
-                <ProgramCard key={program.id} program={program} />
+                <div key={program.id} className="max-w-xl">
+                    <ProgramCard program={program} />
+                </div>
             ))}
           </div>
            <div className="text-center mt-12">

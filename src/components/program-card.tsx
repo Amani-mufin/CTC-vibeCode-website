@@ -40,9 +40,9 @@ export default function ProgramCard({ program }: ProgramCardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        {program.details.hasVideo && (
+        {program.details.hasVideo && program.details.videoUrl && (
             <Button asChild className="w-full">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href={program.details.videoUrl} target="_blank" rel="noopener noreferrer">
                     <Video className="mr-2 h-4 w-4" />
                     Watch the Video
                 </a>

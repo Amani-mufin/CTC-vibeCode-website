@@ -15,9 +15,11 @@ export default function ProgramsPage() {
                         Explore the initiatives and programs we run to foster tech education and growth in Calabar.
                     </p>
                 </div>
-                <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2">
+                <div className="grid gap-8 justify-center">
                     {programs.map((program) => (
-                        <ProgramCard key={program.id} program={program} />
+                         <div key={program.id} className="max-w-2xl">
+                            <ProgramCard program={program} />
+                        </div>
                     ))}
                 </div>
             </div>
