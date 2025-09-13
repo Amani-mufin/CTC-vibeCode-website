@@ -3,17 +3,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Calendar, Code, Mail, MapPin, Phone, Users } from 'lucide-react';
-import { getEvents, getProjects, getTeamMembers } from '@/lib/data';
+import { getEvents, getProjects, getTeamMembers, getPrograms } from '@/lib/data';
 import EventCard from '@/components/event-card';
 import TeamMemberCard from '@/components/team-member-card';
 import { ContactForm } from '@/components/contact-form';
 import { ScrollAnimation } from '@/components/scroll-animation';
 import ProjectCard from '@/components/project-card';
+import ProgramCard from '@/components/program-card';
 
 export default function Home() {
   const featuredEvents = getEvents().slice(0, 3);
   const featuredProjects = getProjects().slice(0, 3);
   const featuredMembers = getTeamMembers().slice(0, 3);
+  const featuredPrograms = getPrograms().slice(0, 2);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -144,9 +146,32 @@ export default function Home() {
         </div>
       </section>
       </ScrollAnimation>
+      
+      <ScrollAnimation animation="fade-in-up">
+       <section id="programs" className="py-20 md:py-28 bg-card">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="flex flex-col items-center text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Programs</h2>
+            <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
+              Explore our flagship programs designed to inspire and educate.
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
+             {featuredPrograms.map((program) => (
+                <ProgramCard key={program.id} program={program} />
+            ))}
+          </div>
+           <div className="text-center mt-12">
+            <Button asChild variant="outline">
+              <Link href="/programs">See All Programs</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      </ScrollAnimation>
 
       <ScrollAnimation animation="fade-in-up">
-      <section id="team" className="py-20 md:py-28 bg-card">
+      <section id="team" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Meet the Team</h2>
