@@ -44,6 +44,19 @@ export interface TeamMember {
     };
 }
 
+export interface Program {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+  details: {
+    schools: string[];
+    goal: string;
+    hasVideo: boolean;
+  };
+}
+
 const events: Event[] = [
     {
         id: '1',
@@ -246,6 +259,21 @@ const teamMembers: TeamMember[] = [
     }
 ];
 
+const programs: Program[] = [
+  {
+    id: '1',
+    title: 'Tech School Storm',
+    description: 'The Tech School Storm is our flagship initiative to introduce young students in Calabar to the world of technology. We visit secondary schools to inspire, educate, and ignite a passion for tech in the next generation.',
+    imageUrl: 'https://picsum.photos/seed/program1/600/400',
+    imageHint: 'students classroom',
+    details: {
+      schools: ['NYSC Demonstration Secondary School', 'Estate Model High School'],
+      goal: 'To ignite a passion for technology in young students and expose them to career opportunities in the tech industry.',
+      hasVideo: true,
+    }
+  }
+];
+
 export function getEvents(): Event[] {
     return events;
 }
@@ -260,4 +288,8 @@ export function getProjects(): Project[] {
 
 export function getTeamMembers(): TeamMember[] {
     return teamMembers;
+}
+
+export function getPrograms(): Program[] {
+    return programs;
 }
