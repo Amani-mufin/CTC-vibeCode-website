@@ -236,7 +236,7 @@ const programs: Program[] = [
       schools: ['NYSC Demonstration Secondary School', 'Estate Model High School'],
       goal: 'To ignite a passion for technology in young students and expose them to career opportunities in the tech industry.',
       hasVideo: true,
-      videoUrl: '#'
+      videoUrl: 'https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link'
     }
   }
 ];
