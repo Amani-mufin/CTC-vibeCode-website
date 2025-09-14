@@ -59,7 +59,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 md:mb-20">
           <div className="relative h-80 rounded-lg overflow-hidden shadow-lg">
              <Image
-                src="https://picsum.photos/seed/about1/600/400"
+                src="https://res.cloudinary.com/sirsuccess/image/upload/v1757841632/IMG_7004_1_peofox.jpg"
                 alt="Our Mission"
                 data-ai-hint="teamwork diversity"
                 fill
@@ -83,7 +83,7 @@ export default function AboutPage() {
           </div>
           <div className="relative h-80 rounded-lg overflow-hidden shadow-lg order-1 md:order-2">
              <Image
-                src="https://picsum.photos/seed/about2/600/400"
+                src="https://res.cloudinary.com/sirsuccess/image/upload/v1757841341/IMG-20241130-WA0042_u40jid.jpg"
                 alt="Our Vision"
                 data-ai-hint="innovation idea"
                 fill
