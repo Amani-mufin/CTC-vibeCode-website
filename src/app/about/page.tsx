@@ -32,17 +32,12 @@ const journeyMilestones = [
     link: 'https://web.facebook.com/share/r/19rEFESRnq/',
   },
   {
-    date: '30th November 2024',
-    description: 'Held the fifth physical hangout.',
-    link: 'https://web.facebook.com/share/p/17BMuD9a9N/',
-  },
-  {
-    date: '16th May 2025',
+    date: '16th May 2024',
     description: 'Launched our first School Storm (Tech in School Initiative).',
     link: 'https://www.instagram.com/reel/DNTtbYmIwa1',
   },
   {
-    date: 'Present (2025)',
+    date: 'Present (2024)',
     description: 'Crossed 1,000+ registered members in our growing community.',
   },
 ];
