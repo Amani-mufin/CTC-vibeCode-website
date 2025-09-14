@@ -19,7 +19,7 @@ export default function EventsPage() {
                     </div>
                     <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
                         <Image 
-                            src="https://picsum.photos/seed/events-hero/600/400" 
+                            src="https://res.cloudinary.com/sirsuccess/image/upload/v1757841641/IMG_7042_1_etbqqb.jpg" 
                             alt="Calabar Tech Community members at an event" 
                             data-ai-hint="tech community"
                             fill
