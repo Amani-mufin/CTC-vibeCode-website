@@ -99,27 +99,31 @@ export default function AboutPage() {
         
         <div className="mb-16 md:mb-20">
           <h2 className="text-3xl font-headline font-semibold text-center mb-12">Our Journey 🚀</h2>
-          <div className="relative max-w-2xl mx-auto">
-            <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border"></div>
-            {journeyMilestones.map((item, index) => (
-              <div key={index} className="relative mb-12">
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full ring-4 ring-background"></div>
-                <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'float-left text-right' : 'float-right text-left'}`}>
-                  <h3 className="font-headline font-semibold">{item.date}</h3>
-                  <p className="text-muted-foreground mt-1">{item.description}</p>
-                   {item.link && (
-                    <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-1 inline-block">
-                      Learn More
-                    </Link>
-                  )}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
+            <div className="space-y-16">
+              {journeyMilestones.map((item, index) => (
+                <div key={index} className="relative flex items-center">
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <div className="p-6 bg-card rounded-lg border shadow-md">
+                      <h3 className="font-headline font-semibold text-primary">{item.date}</h3>
+                      <p className="text-muted-foreground mt-1">{item.description}</p>
+                      {item.link && (
+                        <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-2 inline-block">
+                          Learn More
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                  <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-primary rounded-full ring-8 ring-background"></div>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8' : 'pr-8'}`}></div>
                 </div>
-              </div>
-            ))}
-             <div className="clear-both"></div>
+              ))}
+            </div>
           </div>
-           <p className="mt-8 text-center max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
-             From a small WhatsApp group to 1,000+ members, Calabar Tech Community has become a thriving ecosystem for innovation, learning, and collaboration.
-           </p>
+          <p className="mt-12 text-center max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+            From a small WhatsApp group to 1,000+ members, Calabar Tech Community has become a thriving ecosystem for innovation, learning, and collaboration.
+          </p>
         </div>
 
 
