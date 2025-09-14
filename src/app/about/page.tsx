@@ -1,4 +1,52 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+const journeyMilestones = [
+  {
+    date: '31st May 2021',
+    description: 'Started with the first 5 members on a WhatsApp group.',
+  },
+  {
+    date: '18th September 2022',
+    description: 'Opened our official social media pages.',
+    link: 'https://web.facebook.com/share/19mhntSxoE/',
+  },
+  {
+    date: '21st October 2022',
+    description: 'Held our first physical hangout.',
+    link: 'https://web.facebook.com/share/p/1634LQQiha/',
+  },
+  {
+    date: '31st October 2022',
+    description: 'Reached 200 members.',
+    link: 'https://web.facebook.com/share/p/17J7wwi6mj/',
+  },
+  {
+    date: '21st December 2022',
+    description: 'Hosted our second physical hangout.',
+    link: 'https://web.facebook.com/share/v/17AmVi8bAT/',
+  },
+  {
+    date: '30th December 2023',
+    description: 'Organized our third physical hangout.',
+    link: 'https://web.facebook.com/share/r/19rEFESRnq/',
+  },
+  {
+    date: '30th November 2024',
+    description: 'Held the fifth physical hangout.',
+    link: 'https://web.facebook.com/share/p/17BMuD9a9N/',
+  },
+  {
+    date: '16th May 2025',
+    description: 'Launched our first School Storm (Tech in School Initiative).',
+    link: 'https://www.instagram.com/reel/DNTtbYmIwa1',
+  },
+  {
+    date: 'Present (2025)',
+    description: 'Crossed 1,000+ registered members in our growing community.',
+  },
+];
+
 
 export default function AboutPage() {
   return (
@@ -48,6 +96,32 @@ export default function AboutPage() {
             />
           </div>
         </div>
+        
+        <div className="mb-16 md:mb-20">
+          <h2 className="text-3xl font-headline font-semibold text-center mb-12">Our Journey 🚀</h2>
+          <div className="relative max-w-2xl mx-auto">
+            <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border"></div>
+            {journeyMilestones.map((item, index) => (
+              <div key={index} className="relative mb-12">
+                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-primary rounded-full ring-4 ring-background"></div>
+                <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'float-left text-right' : 'float-right text-left'}`}>
+                  <h3 className="font-headline font-semibold">{item.date}</h3>
+                  <p className="text-muted-foreground mt-1">{item.description}</p>
+                   {item.link && (
+                    <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-1 inline-block">
+                      Learn More
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+             <div className="clear-both"></div>
+          </div>
+           <p className="mt-8 text-center max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+             From a small WhatsApp group to 1,000+ members, Calabar Tech Community has become a thriving ecosystem for innovation, learning, and collaboration.
+           </p>
+        </div>
+
 
         <div className="mb-16 md:mb-20">
             <h2 className="text-3xl font-headline font-semibold text-center mb-8">Our Core Values</h2>
