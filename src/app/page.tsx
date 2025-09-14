@@ -11,6 +11,52 @@ import { ScrollAnimation } from '@/components/scroll-animation';
 import ProjectCard from '@/components/project-card';
 import ProgramCard from '@/components/program-card';
 
+const journeyMilestones = [
+  {
+    date: '31st May 2021',
+    description: 'Started with the first 5 members on a WhatsApp group.',
+  },
+  {
+    date: '18th September 2022',
+    description: 'Opened our official social media pages.',
+    link: 'https://web.facebook.com/share/19mhntSxoE/',
+  },
+  {
+    date: '21st October 2022',
+    description: 'Held our first physical hangout.',
+    link: 'https://web.facebook.com/share/p/1634LQQiha/',
+  },
+  {
+    date: '31st October 2022',
+    description: 'Reached 200 members.',
+    link: 'https://web.facebook.com/share/p/17J7wwi6mj/',
+  },
+  {
+    date: '21st December 2022',
+    description: 'Hosted our second physical hangout.',
+    link: 'https://web.facebook.com/share/v/17AmVi8bAT/',
+  },
+  {
+    date: '30th December 2023',
+    description: 'Organized our third physical hangout.',
+    link: 'https://web.facebook.com/share/r/19rEFESRnq/',
+  },
+  {
+    date: '30th November 2024',
+    description: 'Held the fifth physical hangout.',
+    link: 'https://web.facebook.com/share/p/17BMuD9a9N/',
+  },
+  {
+    date: '16th May 2025',
+    description: 'Launched our first School Storm (Tech in School Initiative).',
+    link: 'https://www.instagram.com/reel/DNTtbYmIwa1',
+  },
+  {
+    date: 'Present (2025)',
+    description: 'Crossed 1,000+ registered members in our growing community.',
+  },
+];
+
 export default function Home() {
   const featuredEvents = getEvents().slice(0, 3);
   const featuredProjects = getProjects().slice(0, 3);
@@ -102,7 +148,47 @@ export default function Home() {
       </ScrollAnimation>
 
       <ScrollAnimation animation="fade-in-up">
-      <section id="events" className="py-20 md:py-28 bg-card">
+        <section id="journey" className="py-20 md:py-28 bg-card">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="mb-16 md:mb-20">
+              <h2 className="text-3xl font-headline font-semibold text-center mb-12">Our Journey 🚀</h2>
+              <div className="relative max-w-4xl mx-auto md:space-y-16">
+                <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border hidden md:block" aria-hidden="true"></div>
+                <div className="md:space-y-0 space-y-12">
+                  {journeyMilestones.map((item, index) => (
+                    <div key={index} className="relative flex items-center md:even:flex-row-reverse">
+                      <div className="hidden md:block w-1/2"></div>
+                      <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-primary rounded-full ring-8 ring-background"></div>
+                      <div className="w-full md:w-1/2 md:px-8">
+                        <div className="relative">
+                            <div className="md:hidden absolute -left-4 top-1/2 -translate-y-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
+                            <div className="md:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-5 h-5 bg-primary rounded-full ring-4 ring-background"></div>
+                            <div className="p-6 bg-card rounded-lg border shadow-md md:text-left">
+                                <h3 className="font-headline font-semibold text-primary">{item.date}</h3>
+                                <p className="text-muted-foreground mt-1">{item.description}</p>
+                                {item.link && (
+                                  <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-2 inline-block">
+                                    Learn More
+                                  </Link>
+                                )}
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <p className="mt-12 text-center max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
+                From a small WhatsApp group to 1,000+ members, Calabar Tech Community has become a thriving ecosystem for innovation, learning, and collaboration.
+              </p>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+
+      <ScrollAnimation animation="fade-in-up">
+      <section id="events" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Featured Events</h2>
@@ -125,7 +211,7 @@ export default function Home() {
       </ScrollAnimation>
       
        <ScrollAnimation animation="fade-in-up">
-       <section id="projects" className="py-20 md:py-28 bg-background">
+       <section id="projects" className="py-20 md:py-28 bg-card">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Projects</h2>
@@ -148,7 +234,7 @@ export default function Home() {
       </ScrollAnimation>
       
       <ScrollAnimation animation="fade-in-up">
-       <section id="programs" className="py-20 md:py-28 bg-card">
+       <section id="programs" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Programs</h2>
@@ -173,7 +259,7 @@ export default function Home() {
       </ScrollAnimation>
 
       <ScrollAnimation animation="fade-in-up">
-      <section id="team" className="py-20 md:py-28 bg-background">
+      <section id="team" className="py-20 md:py-28 bg-card">
         <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Meet the Team</h2>
