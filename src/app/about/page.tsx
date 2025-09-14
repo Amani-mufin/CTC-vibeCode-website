@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getVolunteers } from '@/lib/data';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+
 
 const journeyMilestones = [
   {
@@ -44,6 +48,8 @@ const journeyMilestones = [
 
 
 export default function AboutPage() {
+  const volunteers = getVolunteers();
+
   return (
     <div className="bg-background">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 lg:py-24">
@@ -147,6 +153,25 @@ export default function AboutPage() {
                 </div>
             </div>
         </div>
+        
+        <div className="mb-16 md:mb-20">
+          <h2 className="text-3xl font-headline font-semibold text-center mb-8">Core Volunteers</h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {volunteers.map((volunteer) => (
+              <Card key={volunteer.id} className="text-center flex flex-col items-center p-6 border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
+                <Avatar className="w-24 h-24 mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
+                  <AvatarImage src={volunteer.imageUrl} alt={volunteer.name} data-ai-hint={volunteer.imageHint} />
+                  <AvatarFallback>{volunteer.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                </Avatar>
+                <CardHeader className="p-0">
+                  <CardTitle className="font-headline text-xl">{volunteer.name}</CardTitle>
+                  <CardDescription className="text-primary font-medium">{volunteer.role}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+        </div>
+
 
         <div>
             <h2 className="text-3xl font-headline font-semibold text-center mb-8">What We Do</h2>

@@ -43,6 +43,14 @@ export interface TeamMember {
     };
 }
 
+export interface Volunteer {
+  id: string;
+  name: string;
+  role: string;
+  imageUrl: string;
+  imageHint: string;
+}
+
 export interface Program {
   id: string;
   title: string;
@@ -265,6 +273,16 @@ const teamMembers: TeamMember[] = [
     }
 ];
 
+const volunteers: Volunteer[] = [
+  {
+    id: '1',
+    name: 'Churchill Nnanna',
+    role: 'Front-end Developer',
+    imageUrl: 'https://picsum.photos/seed/volunteer1/400/400',
+    imageHint: 'man developer portrait',
+  }
+];
+
 const programs: Program[] = [
   {
     id: '1',
@@ -337,6 +355,10 @@ export function getTeamMembers(): TeamMember[] {
     return teamMembers;
 }
 
+export function getVolunteers(): Volunteer[] {
+    return volunteers;
+}
+
 export function getPrograms(): Program[] {
     return programs;
 }
@@ -344,4 +366,5 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
