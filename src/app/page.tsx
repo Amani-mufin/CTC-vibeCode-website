@@ -291,33 +291,34 @@ export default function Home() {
             </p>
           </div>
            <div className="flex justify-center">
-            <div className="max-w-md">
-              <h3 className="text-2xl font-headline font-semibold mb-6 text-center">Contact Information</h3>
-              <div className="space-y-6 text-left">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
-                    <MapPin className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-lg">Our Location</h4>
-                    <p className="text-muted-foreground">Calabar, Nigeria</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+            <div className="max-w-4xl">
+              <h3 className="text-2xl font-headline font-semibold mb-8 text-center">Contact Information</h3>
+              <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+                <div className="flex items-center gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Mail className="h-6 w-6" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <h4 className="font-semibold text-lg">Email Us</h4>
-                    <p className="text-muted-foreground">calabartechcomm@gmail.com</p>                  </div>
+                    <p className="text-muted-foreground">calabartechcomm@gmail.com</p>
+                  </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
+                <div className="flex items-center gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Phone className="h-6 w-6" />
                   </div>
-                  <div>
+                  <div className="text-left">
                     <h4 className="font-semibold text-lg">Call Us</h4>
                     <p className="text-muted-foreground">+234 816 091 6203</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full">
+                    <MapPin className="h-6 w-6" />
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-semibold text-lg">Our Location</h4>
+                    <p className="text-muted-foreground">Calabar, Nigeria</p>
                   </div>
                 </div>
               </div>
