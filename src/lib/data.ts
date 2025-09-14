@@ -242,7 +242,7 @@ const teamMembers: TeamMember[] = [
         role: 'Co-founder & Frontend Engineer',
         imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839681/grace_nqxvpr.jpg',
         imageHint: 'woman engineer',
-        bio: 'Grace Effiong is a frontend engineer who possesses a strong interest in fostering the growth of individuals in the technology sector. With over three years of experience, she has gained expertise in developing user-friendly and responsive web interfaces utilizing React.js and Next.js frameworks. Grace is well-versed in frontend technologies, and is passionate about assisting novices in the tech industry by monitoring their progress. Her commitment to mentoring and guiding beginners has the potential to shape their professional journeys and promote the development of a more diverse and inclusive tech community.',
+        bio: 'Grace Effiong is a frontend engineer who possesses a strong interest in fostering the growth of individuals in the technology sector. With over five years of experience, she has gained expertise in developing user-friendly and responsive web interfaces utilizing React.js and Next.js frameworks. Grace is well-versed in frontend technologies, and is passionate about assisting novices in the tech industry by monitoring their progress. Her commitment to mentoring and guiding beginners has the potential to shape their professional journeys and promote the development of a more diverse and inclusive tech community.',
         social: {
             linkedin: 'https://www.linkedin.com/in/grace-effiong/',
             twitter: 'https://twitter.com/Grace_ffiong',
