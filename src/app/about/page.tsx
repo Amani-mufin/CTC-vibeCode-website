@@ -104,19 +104,37 @@ export default function AboutPage() {
             <div className="space-y-16">
               {journeyMilestones.map((item, index) => (
                 <div key={index} className="relative flex items-center">
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="p-6 bg-card rounded-lg border shadow-md">
-                      <h3 className="font-headline font-semibold text-primary">{item.date}</h3>
-                      <p className="text-muted-foreground mt-1">{item.description}</p>
-                      {item.link && (
-                        <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-2 inline-block">
-                          Learn More
-                        </Link>
-                      )}
-                    </div>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                    {index % 2 === 0 ? (
+                      <div className="p-6 bg-card rounded-lg border shadow-md text-right">
+                        <h3 className="font-headline font-semibold text-primary">{item.date}</h3>
+                        <p className="text-muted-foreground mt-1">{item.description}</p>
+                        {item.link && (
+                          <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-2 inline-block">
+                            Learn More
+                          </Link>
+                        )}
+                      </div>
+                    ) : (
+                      <div></div>
+                    )}
                   </div>
                   <div className="absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-primary rounded-full ring-8 ring-background"></div>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8' : 'pr-8'}`}></div>
+                   <div className={`w-1/2 ${index % 2 !== 0 ? 'pl-8' : 'pr-8'}`}>
+                    {index % 2 !== 0 ? (
+                      <div className="p-6 bg-card rounded-lg border shadow-md text-left">
+                        <h3 className="font-headline font-semibold text-primary">{item.date}</h3>
+                        <p className="text-muted-foreground mt-1">{item.description}</p>
+                        {item.link && (
+                          <Link href={item.link} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline mt-2 inline-block">
+                            Learn More
+                          </Link>
+                        )}
+                      </div>
+                    ) : (
+                       <div></div>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
