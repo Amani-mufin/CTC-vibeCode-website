@@ -114,6 +114,45 @@ const events: Event[] = [
         imageHint: 'hackathon code',
         speakers: [],
         resources: 'Challenge statements, access to sponsor APIs, and mentorship session schedules.'
+    },
+    {
+        id: '5',
+        title: 'End of Year Community Hangout',
+        date: '2023-12-30',
+        time: '4:00 PM - 7:00 PM',
+        location: 'Marina Resort, Calabar',
+        shortDescription: 'Our third physical hangout to celebrate the year\'s achievements and network.',
+        description: 'Join us for our end-of-year celebration! This was a fantastic opportunity to connect with community members, reflect on our progress in 2023, and look forward to the year ahead. The event featured games, music, and great conversations.',
+        imageUrl: 'https://picsum.photos/seed/event5/600/400',
+        imageHint: 'community celebration',
+        speakers: [],
+        resources: 'Year-in-review presentation slides.'
+    },
+    {
+        id: '6',
+        title: 'Second Physical Hangout',
+        date: '2022-12-21',
+        time: '5:00 PM - 7:00 PM',
+        location: 'The Playground, Calabar',
+        shortDescription: 'Our second gathering to foster connections and collaborations within the community.',
+        description: 'Building on the success of our first hangout, this event brought together even more members of the Calabar tech scene. It was an evening of networking, sharing project ideas, and strengthening the bonds of our growing community.',
+        imageUrl: 'https://picsum.photos/seed/event6/600/400',
+        imageHint: 'people networking',
+        speakers: [],
+        resources: 'N/A'
+    },
+    {
+        id: '7',
+        title: 'First Community Physical Hangout',
+        date: '2022-10-21',
+        time: '5:00 PM - 7:00 PM',
+        location: 'The Meeting Point, Calabar',
+        shortDescription: 'The very first physical meetup of the Calabar Tech Community.',
+        description: 'A milestone event where our community moved from online interactions to face-to-face connections. This first hangout marked the beginning of a vibrant series of in-person events, laying the foundation for the strong, collaborative community we have today.',
+        imageUrl: 'https://picsum.photos/seed/event7/600/400',
+        imageHint: 'first meetup',
+        speakers: [],
+        resources: 'N/A'
     }
 ];
 
