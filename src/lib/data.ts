@@ -216,7 +216,7 @@ const teamMembers: TeamMember[] = [
         id: '7',
         name: 'Amani Kanu',
         role: 'Founder',
-        imageUrl: 'https://picsum.photos/seed/team7/400/400',
+        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1755992720/DSC_1520e_1_xzvgrs.jpg',
         imageHint: 'man founder portrait',
         bio: 'Amani Kanu is an accomplished software engineer with over four years of experience developing robust web applications for both domestic and international clients. He is also the founder of the Calabar Tech Community, which has played a pivotal role in providing access to technical skills and employment opportunities for numerous tech enthusiasts. As a skilled community builder, Amani has demonstrated exceptional proficiency in fostering strong relationships within the tech industry. Moreover, he has devoted his time to mentoring aspiring technologists, offering guidance and assistance in navigating their career paths. Overall, Amani\'s contributions to the tech community have been highly valuable, and he is widely regarded as a respected figure in the field.',
         social: {
