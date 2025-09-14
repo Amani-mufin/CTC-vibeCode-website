@@ -216,7 +216,7 @@ const teamMembers: TeamMember[] = [
         id: '7',
         name: 'Amani Kanu',
         role: 'Founder',
-        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1755992720/DSC_1520e_1_xzvgrs.jpg',
+        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1755979859/IMG-20250616-WA0039_1_u9c4ta.jpg',
         imageHint: 'man founder portrait',
         bio: 'Amani Kanu is a Senior Software Engineer, Developer Relations (DevRel) professional, and the Founder of Calabar Tech Community. With over half a decade of experience, he has developed scalable web applications for both global and local clients while mentoring aspiring technologists through Semicolon Africa, Decagon, and FootPrint Mentorship—a platform he established to help job seekers navigate their career journeys, secure opportunities, and position themselves as top candidates.\n\nA passionate community builder and tech evangelist, Amani has made significant contributions to the African tech ecosystem by fostering innovation, collaboration, and career growth. His work continues to empower individuals and organizations while inspiring the next generation of technology leaders.',
         social: {
