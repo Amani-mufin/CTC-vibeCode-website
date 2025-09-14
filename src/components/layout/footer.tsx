@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -16,17 +16,17 @@ export function Footer() {
         </div>
         <div className="flex items-center gap-1">
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+            <a href="https://twitter.com/tech_calabar" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
               <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-              <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+            <a href="https://facebook.com/techCalabar" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <Facebook className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/calabar-tech-community/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             </a>
           </Button>
