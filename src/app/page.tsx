@@ -283,7 +283,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
       <section id="contact" className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="container mx-auto px-4 md-px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Get In Touch</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -322,10 +322,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="md:col-span-3">
+            {/* <div className="md:col-span-3">
               <h3 className="text-2xl font-headline font-semibold mb-6 text-left">Send Us a Message</h3>
               <ContactForm />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
