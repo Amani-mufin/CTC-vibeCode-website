@@ -70,13 +70,13 @@ export default function Home() {
           <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground">
             The heart of technology and innovation in Calabar, Nigeria. Join us to learn, build, and grow together.
           </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Button asChild size="lg">
+          <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLScy4nFHFFml0N-BN6mxcctqKoqyIF4UwJ1Us-KfLZecn0MpIg/viewform?pli=1" target="_blank" rel="noopener noreferrer">
                 Join Community <ArrowRight className="ml-2" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
               <Link href="/events">Explore Event</Link>
             </Button>
           </div>
