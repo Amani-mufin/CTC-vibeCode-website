@@ -317,7 +317,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Call Us</h4>
-                    <p className="text-muted-foreground">+234 812 345 6789</p>
+                    <p className="text-muted-foreground">+234 816 091 6203</p>
                   </div>
                 </div>
               </div>

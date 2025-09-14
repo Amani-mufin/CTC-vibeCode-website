@@ -42,7 +42,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Call Us</h3>
-                  <p className="text-muted-foreground">+234 812 345 6789</p>
+                  <p className="text-muted-foreground">+234 816 091 6203</p>
                 </div>
               </div>
             </div>
