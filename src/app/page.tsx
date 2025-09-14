@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://picsum.photos/seed/10/600/400"
+                  src="https://res.cloudinary.com/sirsuccess/image/upload/v1757840903/IMG_6884_1_1_dzwm64.jpg"
                   alt="Community members collaborating"
                   data-ai-hint="collaboration team"
                   fill
