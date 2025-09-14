@@ -55,7 +55,7 @@ const journeyMilestones = [
 export default function Home() {
   const featuredEvents = getEvents().slice(0, 3);
   const featuredProjects = getProjects().slice(0, 3);
-  const featuredMembers = getTeamMembers().slice(0, 3);
+  const featuredMembers = getTeamMembers().slice(0, 4);
   const featuredPrograms = getPrograms().slice(0, 2);
 
   return (
@@ -262,7 +262,7 @@ export default function Home() {
                     The dedicated individuals making the Calabar Tech Community a reality.
                 </p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 {featuredMembers.map((member) => (
                     <TeamMemberCard key={member.id} member={member} />
                 ))}
