@@ -286,9 +286,9 @@ export default function Home() {
             </p>
           </div>
            <div className="flex justify-center">
-            <div className="max-w-4xl">
+            <div className="max-w-4xl w-full">
               <h3 className="text-2xl font-headline font-semibold mb-8 text-center">Contact Information</h3>
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+              <div className="flex flex-col md:flex-row justify-center items-start md:items-center gap-8 md:gap-12">
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Mail className="h-6 w-6" />
