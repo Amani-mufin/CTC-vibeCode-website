@@ -245,8 +245,7 @@ const teamMembers: TeamMember[] = [
         bio: 'Grace Effiong is a frontend engineer who possesses a strong interest in fostering the growth of individuals in the technology sector. With over three years of experience, she has gained expertise in developing user-friendly and responsive web interfaces utilizing React.js and Next.js frameworks. Grace is well-versed in frontend technologies, and is passionate about assisting novices in the tech industry by monitoring their progress. Her commitment to mentoring and guiding beginners has the potential to shape their professional journeys and promote the development of a more diverse and inclusive tech community.',
         social: {
             linkedin: 'https://www.linkedin.com/in/grace-effiong/',
-            github: '#',
-            twitter: 'https://twitter.com/Grace_ffiong'
+            twitter: 'https://twitter.com/Grace_ffiong',
         }
     },
     {
@@ -257,8 +256,8 @@ const teamMembers: TeamMember[] = [
         imageHint: 'man manager portrait',
         bio: 'Bassey Archibong is an experienced product manager with in-depth knowledge of the startup industry in Nigeria and a talent for innovative thinking. He continually challenges the status quo and seeks out new opportunities to excel. Bassey demonstrates excellence in launching cutting-edge products, mentoring emerging talent, and collaborating with cross-functional teams. However, his interests extend beyond business, as he is also dedicated to empowering the youth of Calabar by assisting them in securing gainful employment in the technology field. With his sharp wit and dynamic energy, Bassey is well-equipped to help individuals achieve their career goals, while simultaneously making the process enjoyable, competitive, and thrilling.',
         social: {
-            twitter: '#',
             linkedin: 'https://www.linkedin.com/in/bassey-m-archibong',
+            twitter: '#',
         }
     }
 ];

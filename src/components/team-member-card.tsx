@@ -26,6 +26,13 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
       </CardContent>
       <CardFooter className="mt-4 p-0">
         <div className="flex items-center gap-1">
+          {member.social.linkedin && (
+            <Button variant="ghost" size="icon" asChild>
+              <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
+                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+              </a>
+            </Button>
+          )}
           {member.social.twitter && (
             <Button variant="ghost" size="icon" asChild>
               <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s Twitter`}>
@@ -37,13 +44,6 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
             <Button variant="ghost" size="icon" asChild>
               <a href={member.social.github} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s GitHub`}>
                 <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-              </a>
-            </Button>
-          )}
-          {member.social.linkedin && (
-            <Button variant="ghost" size="icon" asChild>
-              <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn`}>
-                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
             </Button>
           )}
