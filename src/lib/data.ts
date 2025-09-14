@@ -256,7 +256,7 @@ const teamMembers: TeamMember[] = [
         imageHint: 'man manager portrait',
         bio: 'Bassey Archibong is an experienced product manager with in-depth knowledge of the startup industry in Nigeria and a talent for innovative thinking. He continually challenges the status quo and seeks out new opportunities to excel. Bassey demonstrates excellence in launching cutting-edge products, mentoring emerging talent, and collaborating with cross-functional teams. However, his interests extend beyond business, as he is also dedicated to empowering the youth of Calabar by assisting them in securing gainful employment in the technology field. With his sharp wit and dynamic energy, Bassey is well-equipped to help individuals achieve their career goals, while simultaneously making the process enjoyable, competitive, and thrilling.',
         social: {
-            linkedin: 'https://www.linkedin.com/in/bassey-m-archibong',
+            linkedin: 'https://www.linkedin.com/in/basseyarchibong/',
             twitter: '#',
         }
     }
