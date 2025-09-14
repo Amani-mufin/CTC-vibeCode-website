@@ -222,7 +222,6 @@ const teamMembers: TeamMember[] = [
         social: {
             linkedin: 'https://www.linkedin.com/in/amani-kanu/',
             twitter: 'https://twitter.com/AmaniKanu',
-            github: '#'
         }
     },
     {
