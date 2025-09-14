@@ -267,7 +267,7 @@ const programs: Program[] = [
     id: '1',
     title: 'Tech School Storm',
     description: 'The Tech School Storm is our flagship initiative to introduce young students in Calabar to the world of technology. We visit secondary schools to inspire, educate, and ignite a passion for tech in the next generation.',
-    imageUrl: 'https://picsum.photos/seed/program1/600/400',
+    imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839977/m_100_1_zz5rfb.jpg',
     imageHint: 'students classroom',
     details: {
       schools: ['NYSC Demonstration Secondary School', 'Estate Model High School'],
