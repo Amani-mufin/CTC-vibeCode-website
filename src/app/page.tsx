@@ -309,7 +309,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg">Email Us</h4>
-                    <p className="text-muted-foreground">hello@calabartechcommunity.com</p>                  </div>
+                    <p className="text-muted-foreground">calabartechcomm@gmail.com</p>                  </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
