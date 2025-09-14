@@ -10,6 +10,7 @@ import { ContactForm } from '@/components/contact-form';
 import { ScrollAnimation } from '@/components/scroll-animation';
 import ProjectCard from '@/components/project-card';
 import ProgramCard from '@/components/program-card';
+import { Faq } from '@/components/faq';
 
 const journeyMilestones = [
   {
@@ -275,9 +276,27 @@ export default function Home() {
         </div>
       </section>
       </ScrollAnimation>
+      
+      <ScrollAnimation animation="fade-in-up">
+        <section id="faq" className="py-20 md:py-28 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">
+                Frequently Asked Questions
+              </h2>
+              <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
+                Find answers to common questions about our community.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Faq />
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
 
       <ScrollAnimation animation="fade-in-up">
-      <section id="contact" className="py-20 md:py-28 bg-background">
+      <section id="contact" className="py-20 md:py-28 bg-card">
         <div className="container mx-auto px-4 md-px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Get In Touch</h2>
