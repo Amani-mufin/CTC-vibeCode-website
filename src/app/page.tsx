@@ -47,7 +47,7 @@ const journeyMilestones = [
     link: 'https://www.instagram.com/reel/DNTtbYmIwa1',
   },
   {
-    date: 'Present (2024)',
+    date: 'Present (2025)',
     description: 'Crossed 1,000+ registered members in our growing community.',
   },
 ];
