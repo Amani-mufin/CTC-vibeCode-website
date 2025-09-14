@@ -14,9 +14,9 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-12 lg:gap-16">
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-headline font-semibold mb-6">Contact Information</h2>
+        <div className="flex justify-center">
+          <div className="max-w-md">
+            <h2 className="text-2xl font-headline font-semibold mb-6 text-center">Contact Information</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">

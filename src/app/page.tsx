@@ -290,9 +290,9 @@ export default function Home() {
               Have a question, suggestion, or partnership proposal? We&apos;d love to hear from you.
             </p>
           </div>
-           <div className="grid md:grid-cols-5 gap-12 lg:gap-16">
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-headline font-semibold mb-6 text-left">Contact Information</h3>
+           <div className="flex justify-center">
+            <div className="max-w-md">
+              <h3 className="text-2xl font-headline font-semibold mb-6 text-center">Contact Information</h3>
               <div className="space-y-6 text-left">
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full mt-1">
