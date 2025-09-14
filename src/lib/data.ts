@@ -228,7 +228,7 @@ const teamMembers: TeamMember[] = [
         id: '8',
         name: 'Florence Arong',
         role: 'Co-founder',
-        imageUrl: 'https://picsum.photos/seed/team8/400/400',
+        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839614/florence_aa8cyo.jpg',
         imageHint: 'woman professional',
         bio: 'I had always aspired to learn how to code, but had struggled to find the right resources to advance my career until I was introduced to the Calabar Tech Community. Since then, I have been fortunate to benefit from the wealth of knowledge within the community.',
         social: {
@@ -240,7 +240,7 @@ const teamMembers: TeamMember[] = [
         id: '9',
         name: 'Grace Effiong',
         role: 'Co-founder & Frontend Engineer',
-        imageUrl: 'https://picsum.photos/seed/team9/400/400',
+        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839681/grace_nqxvpr.jpg',
         imageHint: 'woman engineer',
         bio: 'Grace Effiong is a frontend engineer who possesses a strong interest in fostering the growth of individuals in the technology sector. With over three years of experience, she has gained expertise in developing user-friendly and responsive web interfaces utilizing React.js and Next.js frameworks. Grace is well-versed in frontend technologies, and is passionate about assisting novices in the tech industry by monitoring their progress. Her commitment to mentoring and guiding beginners has the potential to shape their professional journeys and promote the development of a more diverse and inclusive tech community.',
         social: {
@@ -252,7 +252,7 @@ const teamMembers: TeamMember[] = [
         id: '10',
         name: 'Bassey Archibong',
         role: 'Co-founder & Product Manager',
-        imageUrl: 'https://picsum.photos/seed/team10/400/400',
+        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839613/bassey_ykmymm.jpg',
         imageHint: 'man manager portrait',
         bio: 'Bassey Archibong is an experienced product manager with in-depth knowledge of the startup industry in Nigeria and a talent for innovative thinking. He continually challenges the status quo and seeks out new opportunities to excel. Bassey demonstrates excellence in launching cutting-edge products, mentoring emerging talent, and collaborating with cross-functional teams. However, his interests extend beyond business, as he is also dedicated to empowering the youth of Calabar by assisting them in securing gainful employment in the technology field. With his sharp wit and dynamic energy, Bassey is well-equipped to help individuals achieve their career goals, while simultaneously making the process enjoyable, competitive, and thrilling.',
         social: {
