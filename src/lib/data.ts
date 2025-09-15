@@ -240,7 +240,7 @@ const volunteers: Volunteer[] = [
     id: '1',
     name: 'Churchill Nnanna',
     role: 'Front-end Developer',
-    imageUrl: 'https://picsum.photos/seed/volunteer1/400/400',
+    imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1757943229/Churchill-nnanna_-_Churchill_Nnanna_mzxumw.png',
     imageHint: 'man developer portrait',
   }
 ];
@@ -328,6 +328,7 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
 
