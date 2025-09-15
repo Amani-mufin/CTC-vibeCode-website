@@ -40,6 +40,7 @@ export interface TeamMember {
     social: {
         twitter?: string;
         linkedin?: string;
+        github?: string;
     };
 }
 
@@ -70,101 +71,6 @@ export interface Faq {
 }
 
 const events: Event[] = [
-    {
-        id: '1',
-        title: 'Introduction to Generative AI',
-        date: '2024-08-15',
-        time: '6:00 PM - 8:00 PM',
-        location: 'Co-Creation Hub, Calabar',
-        shortDescription: 'Discover the fundamentals of Generative AI and how it\'s shaping the future of technology.',
-        description: 'Join us for an exciting evening as we dive into the world of Generative AI. This session will cover the basic concepts, popular models like GPT and DALL-E, and practical applications. Whether you\'re a developer, a designer, or just curious about AI, this event is for you. We will explore how to integrate AI into your projects and the ethical considerations involved.',
-        imageUrl: 'https://picsum.photos/seed/event1/600/400',
-        imageHint: 'tech conference',
-        speakers: [
-            { name: 'Dr. Anya Okoro', title: 'AI Researcher', imageUrl: 'https://picsum.photos/seed/speaker1/100/100', imageHint: 'man professional' }
-        ],
-        resources: 'Slides from the presentation, a list of curated articles on Generative AI, and links to open-source models will be provided to all attendees.'
-    },
-    {
-        id: '2',
-        title: 'Building Modern Web Apps with Next.js & Firebase',
-        date: '2024-09-05',
-        time: '10:00 AM - 4:00 PM',
-        location: 'Online Workshop',
-        shortDescription: 'A hands-on workshop on building fast, scalable web applications with Next.js and Firebase.',
-        description: 'This full-day workshop will guide you through building a complete web application from scratch using Next.js. We will cover file-based routing, server components, data fetching strategies, and deployment on Vercel. Participants should have a basic understanding of React and JavaScript. Bring your laptops for a hands-on coding session!',
-        imageUrl: 'https://picsum.photos/seed/event2/600/400',
-        imageHint: 'workshop collaboration',
-        speakers: [
-            { name: 'Funke Adebayo', title: 'Senior Frontend Engineer', imageUrl: 'https://picsum.photos/seed/speaker2/100/100', imageHint: 'woman developer' }
-        ],
-        resources: 'Starter code repository, a cheat sheet of Next.js features, and a guide to deploying on Vercel.'
-    },
-    {
-        id: '3',
-        title: 'Tech Community Networking Night',
-        date: '2024-09-20',
-        time: '7:00 PM - 9:00 PM',
-        location: 'The Tech Garden, Calabar',
-        shortDescription: 'Meet and connect with fellow tech enthusiasts, developers, and entrepreneurs in Calabar.',
-        description: 'Our monthly networking event is back! It\'s a great opportunity to relax, share ideas, and make valuable connections within the Calabar tech ecosystem. Light refreshments will be served. Don\'t forget to bring your business cards and your best elevator pitch!',
-        imageUrl: 'https://picsum.photos/seed/event3/600/400',
-        imageHint: 'tech meetup',
-        speakers: [],
-        resources: 'N/A'
-    },
-     {
-        id: '4',
-        title: 'Annual Hackathon: Solving Local Challenges',
-        date: '2024-10-18',
-        time: '6:00 PM Fri - 6:00 PM Sun',
-        location: 'University of Calabar',
-        shortDescription: 'A 48-hour coding marathon to build solutions for problems facing our local community.',
-        description: 'The Calabar Tech Community Annual Hackathon is here! Form a team, pick a challenge, and build an innovative solution in just 48 hours. We have tracks for education, healthcare, and environmental sustainability. Prizes will be awarded to the top three teams. Mentors from leading tech companies will be available to guide you. Food, drinks, and plenty of coffee will be provided.',
-        imageUrl: 'https://picsum.photos/seed/event4/600/400',
-        imageHint: 'hackathon code',
-        speakers: [],
-        resources: 'Challenge statements, access to sponsor APIs, and mentorship session schedules.'
-    },
-    {
-        id: '5',
-        title: 'End of Year Community Hangout',
-        date: '2023-12-30',
-        time: '4:00 PM - 7:00 PM',
-        location: 'Marina Resort, Calabar',
-        shortDescription: 'Our third physical hangout to celebrate the year\'s achievements and network.',
-        description: 'Join us for our end-of-year celebration! This was a fantastic opportunity to connect with community members, reflect on our progress in 2023, and look forward to the year ahead. The event featured games, music, and great conversations.',
-        imageUrl: 'https://picsum.photos/seed/event5/600/400',
-        imageHint: 'community celebration',
-        speakers: [],
-        resources: 'Year-in-review presentation slides.'
-    },
-    {
-        id: '6',
-        title: 'Second Physical Hangout',
-        date: '2022-12-21',
-        time: '5:00 PM - 7:00 PM',
-        location: 'The Playground, Calabar',
-        shortDescription: 'Our second gathering to foster connections and collaborations within the community.',
-        description: 'Building on the success of our first hangout, this event brought together even more members of the Calabar tech scene. It was an evening of networking, sharing project ideas, and strengthening the bonds of our growing community.',
-        imageUrl: 'https://picsum.photos/seed/event6/600/400',
-        imageHint: 'people networking',
-        speakers: [],
-        resources: 'N/A'
-    },
-    {
-        id: '7',
-        title: 'First Community Physical Hangout',
-        date: '2022-10-21',
-        time: '5:00 PM - 7:00 PM',
-        location: 'The Meeting Point, Calabar',
-        shortDescription: 'The very first physical meetup of the Calabar Tech Community.',
-        description: 'A milestone event where our community moved from online interactions to face-to-face connections. This first hangout marked the beginning of a vibrant series of in-person events, laying the foundation for the strong, collaborative community we have today.',
-        imageUrl: 'https://picsum.photos/seed/event7/600/400',
-        imageHint: 'first meetup',
-        speakers: [],
-        resources: 'N/A'
-    },
     {
         id: '8',
         title: 'Calabar Tech Community Hangout',
@@ -288,6 +194,7 @@ const teamMembers: TeamMember[] = [
         social: {
              linkedin: 'https://www.linkedin.com/in/amani-kanu/',
             twitter: 'https://twitter.com/AmaniKanu',
+            github: 'https://github.com/AmaniKanu'
         }
     },
     {
@@ -395,7 +302,7 @@ const faqs: Faq[] = [
 
 
 export function getEvents(): Event[] {
-    return events;
+    return events.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getEventById(id: string): Event | undefined {
@@ -421,6 +328,7 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
 

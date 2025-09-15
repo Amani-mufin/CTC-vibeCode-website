@@ -86,6 +86,41 @@ export default function Home() {
       </section>
 
       <ScrollAnimation>
+        <section id="featured-event" className="py-20 md:py-28 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12">
+              <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+              <div className="relative grid md:grid-cols-2 gap-8 items-center">
+                <div className="text-center md:text-left">
+                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">The Tech Conference Calabar</h2>
+                  <p className="mt-4 text-lg text-muted-foreground">
+                    The biggest tech conference in Calabar, bringing together the brightest minds in technology. Join us for keynotes, workshops, and networking.
+                  </p>
+                  <p className="mt-2 font-semibold text-primary">November 2025 | Venue TBA</p>
+                  <div className="mt-6">
+                    <Button asChild size="lg">
+                      <Link href="#">
+                        Visit Official Site <ArrowRight className="ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+                <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
+                  <Image
+                    src="https://picsum.photos/seed/techconf/600/400"
+                    alt="The Tech Conference Calabar"
+                    data-ai-hint="tech conference audience"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+
+      <ScrollAnimation>
       <section id="about" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
