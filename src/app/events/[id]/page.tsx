@@ -1,11 +1,9 @@
 import { getEventById, getEvents } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Calendar, Clock, MapPin, Users } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Calendar, Clock, MapPin } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import EventDetailSummary from "@/components/event-detail-summary";
 
 export async function generateStaticParams() {
   const events = getEvents();
@@ -92,8 +90,6 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
                 </div>
               </CardContent>
             </Card>
-
-            <EventDetailSummary eventDetails={event.description} resources={event.resources} />
 
           </div>
         </div>
