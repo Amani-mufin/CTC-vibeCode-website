@@ -164,6 +164,61 @@ const events: Event[] = [
         imageHint: 'first meetup',
         speakers: [],
         resources: 'N/A'
+    },
+    {
+        id: '8',
+        title: 'Calabar Tech Community Hangout',
+        date: '2024-07-20',
+        time: '3:00 PM',
+        location: 'Lions Park, Marian Rd by Ekong Etta Traffic Light',
+        shortDescription: 'A community hangout at Lions Park to connect and have fun.',
+        description: 'It’s all going down at the Calabar Tech Community Hangout! Bring your A-game. See you soon!',
+        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1757938742/481986853_595576653317630_7237548188180696827_n_m7ra3l.jpg',
+        imageHint: 'community hangout',
+        speakers: [],
+        resources: 'N/A'
+    },
+    {
+        id: '9',
+        title: 'Calabar Tech Community Pizza Hangout 3.0',
+        date: '2023-12-30',
+        time: 'Not specified',
+        location: 'Deluxe bar Atekong junction Marian',
+        shortDescription: 'Not just a regular hangout, this one is coming with so many vibes and varieties, Games, and lots more.',
+        description: 'It\'s "Calabar Tech Community" Pizza Hangout 3.0. This is not your regular hangout, This one is coming with so many vibes and varieties, Games, and lots more. You wouldn\'t want to miss it. Share to invite those already in Tech and those who are interested in building a Career in Tech. We look forward to having you there.',
+        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1757938742/480349656_584475874427708_2364846479836564905_n_ciuufx.jpg',
+        imageHint: 'pizza hangout',
+        speakers: [],
+        resources: 'Registration Link: https://bit.ly/cal_tech_hangout'
+    },
+    {
+        id: '10',
+        title: 'CRACKING THE CODE: A Roadmap To Success In Tech Interview Process',
+        date: '2024-04-27',
+        time: '9:00 AM',
+        location: 'Virtual',
+        shortDescription: 'Discover insider tips and strategies to ace your next tech interview.',
+        description: 'Join us for "CRACKING THE CODE: A Roadmap To Success In Tech Interview Process" hosted by Calabar Tech Community. Discover insider tips and strategies from professional HR, Eva Ebuzoeme to ace your next tech interview. From resume crafting to interview etiquette, unlock the secrets to landing your dream job in tech. This event promises invaluable insights and networking opportunities.',
+        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1757938741/482210798_621941777352465_418539730082261152_n_kt4xpc.jpg',
+        imageHint: 'tech interview',
+        speakers: [
+            { name: 'Eva Ebuzoeme', title: 'Professional HR', imageUrl: 'https://picsum.photos/seed/speaker3/100/100', imageHint: 'woman professional' },
+            { name: 'Amani Kanu', title: 'Senior Software Engineer and Program Manager', imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1755979859/IMG-20250616-WA0039_1_u9c4ta.jpg', imageHint: 'man professional' }
+        ],
+        resources: 'Register at: https://bit.ly/ctc_interview'
+    },
+    {
+        id: 'tech-conference-calabar',
+        title: 'The Tech Conference Calabar',
+        date: '2025-11-01',
+        time: '9:00 AM',
+        location: 'Venue To Be Announced',
+        shortDescription: 'The biggest tech conference in Calabar, bringing together the brightest minds in technology.',
+        description: 'Join us for the largest gathering of tech talent in Calabar. "The Tech Conference Calabar" will feature keynote speeches from industry leaders, hands-on workshops, and networking opportunities. Whether you are a seasoned professional or just starting, this is an event you cannot miss.',
+        imageUrl: 'https://picsum.photos/seed/techconf/600/400',
+        imageHint: 'tech conference audience',
+        speakers: [],
+        resources: 'Official event website: #'
     }
 ];
 
@@ -366,5 +421,6 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
