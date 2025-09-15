@@ -14,7 +14,7 @@ export default function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
     <Card className="text-center flex flex-col items-center p-6 border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
       <Avatar className="w-24 h-24 mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
-        <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint={member.imageHint} />
+        <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint={member.imageHint} className="object-cover" />
         <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
       </Avatar>
       <CardHeader className="p-0">
