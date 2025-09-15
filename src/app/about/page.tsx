@@ -154,25 +154,6 @@ export default function AboutPage() {
             </div>
         </div>
         
-        <div className="mb-16 md:mb-20">
-          <h2 className="text-3xl font-headline font-semibold text-center mb-8">Core Volunteers</h2>
-          <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-sm mx-auto sm:max-w-none">
-            {volunteers.map((volunteer) => (
-              <Card key={volunteer.id} className="text-center flex flex-col items-center p-6 border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
-                <Avatar className="w-24 h-24 mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
-                  <AvatarImage src={volunteer.imageUrl} alt={volunteer.name} data-ai-hint={volunteer.imageHint} className="object-cover" />
-                  <AvatarFallback>{volunteer.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                </Avatar>
-                <CardHeader className="p-0">
-                  <CardTitle className="font-headline text-xl">{volunteer.name}</CardTitle>
-                  <CardDescription className="text-primary font-medium">{volunteer.role}</CardDescription>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-
         <div>
             <h2 className="text-3xl font-headline font-semibold text-center mb-8">What We Do</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
