@@ -124,7 +124,7 @@ const events: Event[] = [
         imageUrl: 'https://picsum.photos/seed/techconf/600/400',
         imageHint: 'tech conference audience',
         speakers: [],
-        resources: 'Official event website: #'
+        resources: 'Official event website: https://dev-tcc.netlify.app/'
     }
 ];
 
@@ -328,6 +328,7 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
 

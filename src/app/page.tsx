@@ -99,7 +99,7 @@ export default function Home() {
                   <p className="mt-2 font-semibold text-primary">November 2025 | Venue TBA</p>
                   <div className="mt-6">
                     <Button asChild size="lg">
-                      <Link href="#">
+                      <Link href="https://dev-tcc.netlify.app/" target="_blank" rel="noopener noreferrer">
                         Visit Official Site <ArrowRight className="ml-2" />
                       </Link>
                     </Button>
@@ -190,7 +190,7 @@ export default function Home() {
                     <div key={index} className="relative flex items-center md:even:flex-row-reverse">
                       <div className="hidden md:block w-1/2"></div>
                       <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-primary rounded-full ring-8 ring-background"></div>
-                      <div className="w-full md:w-1/2 md:px-8">
+                      <div className="w-full md:w/2 md:px-8">
                         <div className="relative">
                             <div className="md:hidden absolute -left-4 top-1/2 -translate-y-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
                             <div className="md:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-5 h-5 bg-primary rounded-full ring-4 ring-background"></div>
