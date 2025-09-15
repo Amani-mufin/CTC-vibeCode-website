@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <CardTitle className="font-headline text-xl h-7 group-hover:text-primary transition-colors">{project.title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow space-y-3">
-         <p className="text-sm text-muted-foreground h-20">{project.description}</p>
+         <p className="text-sm text-muted-foreground min-h-[6rem]">{project.description}</p>
          <div className="flex items-center text-sm text-muted-foreground pt-2">
           <Users className="mr-2 h-4 w-4 shrink-0" />
           <span className="truncate">{project.team.join(', ')}</span>

@@ -47,10 +47,6 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          {/* <div className="md:col-span-3">
-             <h2 className="text-2xl font-headline font-semibold mb-6">Send Us a Message</h2>
-            <ContactForm />
-          </div> */}
         </div>
       </div>
     </div>

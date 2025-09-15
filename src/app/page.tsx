@@ -190,7 +190,7 @@ export default function Home() {
                     <div key={index} className="relative flex items-center md:even:flex-row-reverse">
                       <div className="hidden md:block w-1/2"></div>
                       <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-primary rounded-full ring-8 ring-background"></div>
-                      <div className="w-full md:w/2 md:px-8">
+                      <div className="w-full md:w-1/2 md:px-8">
                         <div className="relative">
                             <div className="md:hidden absolute -left-4 top-1/2 -translate-y-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
                             <div className="md:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-5 h-5 bg-primary rounded-full ring-4 ring-background"></div>
@@ -349,8 +349,7 @@ export default function Home() {
                   </div>
                   <div className="text-left">
                     <h4 className="font-semibold text-lg">Email Us</h4>
-                    <p className="text-muted-foreground">calabartechcomm@gmail.com</p>
-                  </div>
+                    <p className="text-muted-foreground">calabartechcomm@gmail.com</p>                  </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
@@ -372,10 +371,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* <div className="md:col-span-3">
-              <h3 className="text-2xl font-headline font-semibold mb-6 text-left">Send Us a Message</h3>
-              <ContactForm />
-            </div> */}
           </div>
         </div>
       </section>
