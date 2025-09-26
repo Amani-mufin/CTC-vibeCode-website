@@ -79,7 +79,7 @@ const events: Event[] = [
         location: 'Virtual',
         shortDescription: 'Insights on navigating a career in tech from industry experts.',
         description: 'A huge shoutout to our amazing speakers, Onone Ega, Oyebamiji Jeremiah, Mary Onuorah, and Godswill Ejike, for illuminating the path to success in the tech world at our recent event! Your insights on "Navigating Your Career as a Techy" were truly inspiring.',
-        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1758883960/tech_event_1_bic4wn.jpg',
+        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1758884131/tech_event_1_py9sni.jpg',
         imageHint: 'tech career event',
         speakers: [
             { name: 'Onone Ega', title: 'IT Project Manager & Scrum Master', imageUrl: 'https://picsum.photos/seed/speaker4/100/100', imageHint: 'woman professional' },
@@ -346,10 +346,3 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
-
-
-
-
-
-
-
