@@ -72,6 +72,24 @@ export interface Faq {
 
 const events: Event[] = [
     {
+        id: '11',
+        title: 'Navigating Your Career as a Techy',
+        date: '2024-01-27',
+        time: 'Not specified',
+        location: 'Virtual',
+        shortDescription: 'Insights on navigating a career in tech from industry experts.',
+        description: 'A huge shoutout to our amazing speakers, Onone Ega, Oyebamiji Jeremiah, Mary Onuorah, and Godswill Ejike, for illuminating the path to success in the tech world at our recent event! Your insights on "Navigating Your Career as a Techy" were truly inspiring.',
+        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1758883960/tech_event_1_bic4wn.jpg',
+        imageHint: 'tech career event',
+        speakers: [
+            { name: 'Onone Ega', title: 'IT Project Manager & Scrum Master', imageUrl: 'https://picsum.photos/seed/speaker4/100/100', imageHint: 'woman professional' },
+            { name: 'Godswill Ejike', title: 'Lead Product Designer', imageUrl: 'https://picsum.photos/seed/speaker5/100/100', imageHint: 'man designer' },
+            { name: 'Mary Onuorah', title: 'Software Quality Assurance (QA)', imageUrl: 'https://picsum.photos/seed/speaker6/100/100', imageHint: 'woman qa' },
+            { name: 'Oyebamiji Jeremiah', title: 'Snr. Software Engineer', imageUrl: 'https://picsum.photos/seed/speaker7/100/100', imageHint: 'man engineer' }
+        ],
+        resources: 'N/A'
+    },
+    {
         id: '8',
         title: 'Calabar Tech Community Hangout',
         date: '2024-07-20',
@@ -328,6 +346,7 @@ export function getPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
 
