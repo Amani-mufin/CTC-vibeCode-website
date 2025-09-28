@@ -221,7 +221,7 @@ const teamMembers: TeamMember[] = [
         role: 'Co-founder',
         imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839614/florence_aa8cyo.jpg',
         imageHint: 'woman professional',
-        bio: 'I had always aspired to learn how to code, but had struggled to find the right resources to advance my career until I was introduced to the Calabar Tech Community. Since then, I have been fortunate to benefit from the wealth of knowledge within the community.',
+        bio: 'Florence Egwu is a software engineer with half a decade of experience spanning fintech and healthtech. She is the co-founder of the Calabar Tech Community, where she drives initiatives that foster innovation, collaboration, and talent development. As a Backend Engineer, she builds scalable distributed systems with modern technologies, and is passionate about knowledge sharing, mentorship, and community building. Florence is committed to advancing Calabar’s position as a growing hub for tech and innovation.',
         social: {
             linkedin: 'https://www.linkedin.com/in/florencesarah-arong-egwu',
             twitter: '#',
