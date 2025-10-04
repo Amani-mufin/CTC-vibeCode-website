@@ -134,15 +134,15 @@ const events: Event[] = [
     {
         id: 'tech-conference-calabar',
         title: 'The Tech Conference Calabar',
-        date: '2025-11-01',
+        date: '2025-11-28',
         time: '9:00 AM',
-        location: 'Venue To Be Announced',
+        location: 'Calabar International Convention Centre',
         shortDescription: 'The biggest tech conference in Calabar, bringing together the brightest minds in technology.',
         description: 'Join us for the largest gathering of tech talent in Calabar. "The Tech Conference Calabar" will feature keynote speeches from industry leaders, hands-on workshops, and networking opportunities. Whether you are a seasoned professional or just starting, this is an event you cannot miss.',
-        imageUrl: 'https://picsum.photos/seed/techconf/600/400',
+        imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1759598949/1003150400_zk97b3.png',
         imageHint: 'tech conference audience',
         speakers: [],
-        resources: 'Official event website: https://dev-tcc.netlify.app/'
+        resources: 'Official event website: https://calabartechconf.ng'
     }
 ];
 

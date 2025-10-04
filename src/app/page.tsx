@@ -96,7 +96,7 @@ export default function Home() {
                   <p className="mt-4 text-lg text-muted-foreground">
                     The biggest tech conference in Calabar, bringing together the brightest minds in technology. Join us for keynotes, workshops, and networking.
                   </p>
-                  <p className="mt-2 font-semibold text-primary">November 2025 | Venue TBA</p>
+                  <p className="mt-2 font-semibold text-primary">28th - 29th November 2025 | Venue Calabar International Convention Centre</p>
                   <div className="mt-6">
                     <Button asChild size="lg">
                       <Link href="https://dev-tcc.netlify.app/" target="_blank" rel="noopener noreferrer">
@@ -106,13 +106,13 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
-                  <Image
-                    src="https://picsum.photos/seed/techconf/600/400"
-                    alt="The Tech Conference Calabar"
-                    data-ai-hint="tech conference audience"
-                    fill
-                    className="object-cover"
-                  />
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/onBDDzC21ww"
+                    title="The Tech Conference Calabar"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
               </div>
             </div>
