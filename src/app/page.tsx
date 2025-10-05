@@ -99,7 +99,7 @@ export default function Home() {
                   <p className="mt-2 font-semibold text-primary">28th - 29th November 2025 | Venue Calabar International Convention Centre</p>
                   <div className="mt-6">
                     <Button asChild size="lg">
-                      <Link href="https://dev-tcc.netlify.app/" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://calabartechconf.ng" target="_blank" rel="noopener noreferrer">
                         Visit Official Site <ArrowRight className="ml-2" />
                       </Link>
                     </Button>
