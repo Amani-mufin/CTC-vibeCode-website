@@ -20,20 +20,23 @@ export default function ProgramCard({ program }: ProgramCardProps) {
           fill
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
+        {program.status === 'upcoming' && <Badge className="absolute top-3 right-3">Upcoming</Badge>}
       </div>
       <CardHeader>
         <CardTitle className="font-headline text-xl h-7 group-hover:text-primary transition-colors">{program.title}</CardTitle>
         <CardDescription className="pt-2">{program.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow space-y-4">
-        <div>
-          <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>School Involvement</h4>
-          <div className="flex flex-wrap gap-2">
-            {program.details.schools.map(school => (
-              <Badge key={school} variant="secondary">{school}</Badge>
-            ))}
+        {program.details.schools && (
+          <div>
+            <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>School Involvement</h4>
+            <div className="flex flex-wrap gap-2">
+              {program.details.schools.map(school => (
+                <Badge key={school} variant="secondary">{school}</Badge>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
          <div>
           <h4 className="font-semibold text-sm mb-2 flex items-center"><Goal className="mr-2 h-4 w-4 text-primary"/>Our Goal</h4>
           <p className="text-sm text-muted-foreground">{program.details.goal}</p>

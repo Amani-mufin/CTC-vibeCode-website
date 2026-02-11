@@ -58,11 +58,14 @@ export interface Program {
   description: string;
   imageUrl: string;
   imageHint: string;
+  status?: 'upcoming' | 'past';
   details: {
-    schools: string[];
+    schools?: string[];
     goal: string;
-    hasVideo: boolean;
+    hasVideo?: boolean;
     videoUrl?: string;
+    date?: string;
+    location?: string;
   };
 }
 export interface Faq {
@@ -142,7 +145,7 @@ const events: Event[] = [
         imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1759598949/1003150400_zk97b3.png',
         imageHint: 'tech conference audience',
         speakers: [],
-        resources: 'Official event website: https://dev-tcc.netlify.app/'
+        resources: 'Official event website: https://calabartechconf.ng'
     }
 ];
 
@@ -265,19 +268,51 @@ const volunteers: Volunteer[] = [
 
 const programs: Program[] = [
   {
-    id: '1',
-    title: 'Tech School Storm',
-    description: 'School Tech Storm is our flagship tech outreach initiative for secondary school students (SS2-SS3). The program introduces them to core technology concepts like AI and robotics, and helps them understand clear tech career paths from an early stage. Our sessions focus on guided interactions with tech professionals to build curiosity and confidence. In 2025, we successfully reached over 400 students across two schools. For 2026, we aim to expand our impact to 4-5 schools over a two-day program, with a goal of reaching over 2000 students.',
+    id: 'school-tech-storm-2026',
+    title: 'School Tech Storm 2026',
+    status: 'upcoming',
+    description: 'Following the success of the 2025 edition, School Tech Storm is expanding its impact. This 2-day outreach program aims to reach 4-5 schools, introducing students to tech careers, digital skills, and future opportunities in the tech ecosystem.',
     imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839977/m_100_1_zz5rfb.jpg',
     imageHint: 'students classroom',
     details: {
-      schools: ['NYSC Demonstration Secondary School', 'Estate Model High School', 'Expanding to 4-5 more schools in 2026'],
+      schools: ['Targeting 4-5 schools in Cross River State'],
+      goal: 'To expose students to real-world tech career paths early, inspire interest in digital skills, and bridge the gap between secondary education and the tech industry.',
+      hasVideo: true,
+      videoUrl: 'https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link',
+      date: 'March 23-24, 2026'
+    }
+  },
+  {
+    id: 'tech-conference-calabar-2025',
+    title: 'The Tech Conference Calabar',
+    status: 'past',
+    description: 'The biggest tech conference in Calabar, bringing together the brightest minds in technology. The event featured keynotes, workshops, and networking.',
+    imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1759598949/1003150400_zk97b3.png',
+    imageHint: 'tech conference audience',
+    details: {
+        goal: 'Bringing together the brightest minds in technology.',
+        hasVideo: true,
+        videoUrl: 'https://www.youtube.com/embed/onBDDzC21ww',
+        date: '28th - 29th November 2025',
+        location: 'Calabar International Convention Centre'
+    }
+  },
+  {
+    id: 'school-tech-storm-2025',
+    title: 'School Tech Storm 2025',
+    status: 'past',
+    description: 'Our flagship tech outreach for secondary schools. In 2025, we successfully reached over 400 SS class students across two schools, improving awareness of tech careers and sparking interest in digital skills.',
+    imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839977/m_100_1_zz5rfb.jpg',
+    imageHint: 'students learning tech',
+    details: {
+      schools: ['NYSC Demonstration Secondary School', 'Estate Model High School'],
       goal: 'To expose students to real-world tech career paths at an early stage, inspire interest in digital skills and innovation, and bridge the gap between secondary education and the tech industry.',
       hasVideo: true,
       videoUrl: 'https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link'
     }
   }
 ];
+
 
 const faqs: Faq[] = [
   {
@@ -343,6 +378,16 @@ export function getPrograms(): Program[] {
     return programs;
 }
 
+export function getUpcomingPrograms(): Program[] {
+    return programs.filter(p => p.status === 'upcoming');
+}
+
+export function getPastPrograms(): Program[] {
+    return programs.filter(p => p.status === 'past');
+}
+
+
 export function getFaqs(): Faq[] {
   return faqs;
 }
+

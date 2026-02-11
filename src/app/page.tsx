@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight, Calendar, Code, Mail, MapPin, Phone, Users } from 'lucide-react';
-import { getEvents, getProjects, getTeamMembers, getPrograms } from '@/lib/data';
+import { getEvents, getProjects, getTeamMembers, getUpcomingPrograms, getPastPrograms } from '@/lib/data';
 import EventCard from '@/components/event-card';
 import TeamMemberCard from '@/components/team-member-card';
 import { ContactForm } from '@/components/contact-form';
@@ -57,7 +57,10 @@ export default function Home() {
   const featuredEvents = getEvents().slice(0, 3);
   const featuredProjects = getProjects().slice(0, 3);
   const featuredMembers = getTeamMembers().slice(0, 4);
-  const featuredPrograms = getPrograms().slice(0, 2);
+  const upcomingPrograms = getUpcomingPrograms();
+  const pastPrograms = getPastPrograms();
+  const conferenceProgram = pastPrograms.find(p => p.id === 'tech-conference-calabar-2025');
+  const otherPastPrograms = pastPrograms.filter(p => p.id !== 'tech-conference-calabar-2025');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -85,41 +88,88 @@ export default function Home() {
         </ScrollAnimation>
       </section>
 
-      <ScrollAnimation>
-        <section id="featured-event" className="py-20 md:py-28 bg-background">
+      <ScrollAnimation animation="fade-in-up">
+        <section id="upcoming-programs" className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12">
-              <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-              <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                <div className="text-center md:text-left">
-                  <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">The Tech Conference Calabar</h2>
-                  <p className="mt-4 text-lg text-muted-foreground">
-                    The biggest tech conference in Calabar, bringing together the brightest minds in technology. Join us for keynotes, workshops, and networking.
-                  </p>
-                  <p className="mt-2 font-semibold text-primary">28th - 29th November 2025 | Venue Calabar International Convention Centre</p>
-                  <div className="mt-6">
-                    <Button asChild size="lg">
-                      <Link href="https://calabartechconf.ng" target="_blank" rel="noopener noreferrer">
-                        Visit Official Site <ArrowRight className="ml-2" />
-                      </Link>
-                    </Button>
+            <div className="flex flex-col items-center text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Upcoming Programs</h2>
+              <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
+                Don&apos;t miss our next big initiatives.
+              </p>
+            </div>
+            <div className="grid gap-8 justify-center">
+               {upcomingPrograms.map((program) => (
+                  <div key={program.id} className="max-w-xl">
+                      <ProgramCard program={program} />
                   </div>
-                </div>
-                <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/onBDDzC21ww"
-                    title="The Tech Conference Calabar"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
       </ScrollAnimation>
 
+      <ScrollAnimation animation="fade-in-up">
+        <section id="past-programs" className="py-20 md:py-28 bg-card">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="flex flex-col items-center text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Highlights from Past Programs</h2>
+              <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
+                A look back at our impactful events and initiatives.
+              </p>
+            </div>
+
+            {conferenceProgram && (
+              <div className="relative rounded-lg overflow-hidden bg-background shadow-lg p-8 md:p-12 mb-12">
+                  <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+                  <div className="relative grid md:grid-cols-2 gap-8 items-center">
+                  <div className="text-center md:text-left">
+                      <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary">{conferenceProgram.title}</h3>
+                      <p className="mt-4 text-lg text-muted-foreground">
+                      {conferenceProgram.description}
+                      </p>
+                      {conferenceProgram.details.date && conferenceProgram.details.location && (
+                      <p className="mt-2 font-semibold text-primary">{conferenceProgram.details.date} | Venue {conferenceProgram.details.location}</p>
+                      )}
+                      <div className="mt-6">
+                      <Button asChild size="lg">
+                          <Link href="https://calabartechconf.ng" target="_blank" rel="noopener noreferrer">
+                          Visit Official Site <ArrowRight className="ml-2" />
+                          </Link>
+                      </Button>
+                      </div>
+                  </div>
+                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
+                      {conferenceProgram.details.videoUrl && (
+                        <iframe
+                          className="absolute top-0 left-0 w-full h-full"
+                          src={conferenceProgram.details.videoUrl}
+                          title={conferenceProgram.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      )}
+                  </div>
+                  </div>
+              </div>
+            )}
+
+            <div className="grid gap-8 justify-center">
+               {otherPastPrograms.map((program) => (
+                  <div key={program.id} className="max-w-xl">
+                      <ProgramCard program={program} />
+                  </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button asChild variant="outline">
+                <Link href="/programs">See All Programs</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </ScrollAnimation>
+      
       <ScrollAnimation>
       <section id="about" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-6">
@@ -265,32 +315,7 @@ export default function Home() {
       </ScrollAnimation>
       
       <ScrollAnimation animation="fade-in-up">
-       <section id="programs" className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex flex-col items-center text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Programs</h2>
-            <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
-              Explore our flagship programs designed to inspire and educate.
-            </p>
-          </div>
-          <div className="grid gap-8 justify-center">
-             {featuredPrograms.map((program) => (
-                <div key={program.id} className="max-w-xl">
-                    <ProgramCard program={program} />
-                </div>
-            ))}
-          </div>
-           <div className="text-center mt-12">
-            <Button asChild variant="outline">
-              <Link href="/programs">See All Programs</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-      </ScrollAnimation>
-
-      <ScrollAnimation animation="fade-in-up">
-      <section id="team" className="py-20 md:py-28 bg-card">
+      <section id="team" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Meet the Team</h2>
@@ -313,7 +338,7 @@ export default function Home() {
       </ScrollAnimation>
       
       <ScrollAnimation animation="fade-in-up">
-        <section id="faq" className="py-20 md:py-28 bg-background">
+        <section id="faq" className="py-20 md:py-28 bg-card">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">
@@ -331,7 +356,7 @@ export default function Home() {
       </ScrollAnimation>
 
       <ScrollAnimation animation="fade-in-up">
-      <section id="contact" className="py-20 md:py-28 bg-card">
+      <section id="contact" className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4 md-px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Get In Touch</h2>
