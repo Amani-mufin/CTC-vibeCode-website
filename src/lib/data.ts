@@ -142,7 +142,7 @@ const events: Event[] = [
         imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1759598949/1003150400_zk97b3.png',
         imageHint: 'tech conference audience',
         speakers: [],
-        resources: 'Official event website: https://calabartechconf.ng'
+        resources: 'Official event website: https://dev-tcc.netlify.app/'
     }
 ];
 
@@ -267,12 +267,12 @@ const programs: Program[] = [
   {
     id: '1',
     title: 'Tech School Storm',
-    description: 'The Tech School Storm is our flagship initiative to introduce young students in Calabar to the world of technology. We visit secondary schools to inspire, educate, and ignite a passion for tech in the next generation.',
+    description: 'School Tech Storm is our flagship tech outreach initiative for secondary school students (SS2-SS3). The program introduces them to core technology concepts like AI and robotics, and helps them understand clear tech career paths from an early stage. Our sessions focus on guided interactions with tech professionals to build curiosity and confidence. In 2025, we successfully reached over 400 students across two schools. For 2026, we aim to expand our impact to 4-5 schools over a two-day program, with a goal of reaching over 2000 students.',
     imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1757839977/m_100_1_zz5rfb.jpg',
     imageHint: 'students classroom',
     details: {
-      schools: ['NYSC Demonstration Secondary School', 'Estate Model High School'],
-      goal: 'To ignite a passion for technology in young students and expose them to career opportunities in the tech industry.',
+      schools: ['NYSC Demonstration Secondary School', 'Estate Model High School', 'Expanding to 4-5 more schools in 2026'],
+      goal: 'To expose students to real-world tech career paths at an early stage, inspire interest in digital skills and innovation, and bridge the gap between secondary education and the tech industry.',
       hasVideo: true,
       videoUrl: 'https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link'
     }

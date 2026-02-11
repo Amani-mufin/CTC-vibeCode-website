@@ -27,7 +27,7 @@ export default function ProgramCard({ program }: ProgramCardProps) {
       </CardHeader>
       <CardContent className="flex-grow space-y-4">
         <div>
-          <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>Visited Schools</h4>
+          <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>School Involvement</h4>
           <div className="flex flex-wrap gap-2">
             {program.details.schools.map(school => (
               <Badge key={school} variant="secondary">{school}</Badge>
