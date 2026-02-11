@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Calendar, Code, Mail, MapPin, Phone, Users } from 'lucide-react';
+import { ArrowRight, Calendar, Code, Mail, MapPin, Phone, School, Users, Video } from 'lucide-react';
 import { getEvents, getProjects, getTeamMembers, getUpcomingPrograms, getPastPrograms } from '@/lib/data';
 import EventCard from '@/components/event-card';
 import TeamMemberCard from '@/components/team-member-card';
@@ -61,7 +61,8 @@ export default function Home() {
   const upcomingPrograms = getUpcomingPrograms();
   const pastPrograms = getPastPrograms();
   const conferenceProgram = pastPrograms.find(p => p.id === 'tech-conference-calabar-2025');
-  const otherPastPrograms = pastPrograms.filter(p => p.id !== 'tech-conference-calabar-2025');
+  const schoolTechStorm2025Program = pastPrograms.find(p => p.id === 'school-tech-storm-2025');
+  const otherPastPrograms = pastPrograms.filter(p => p.id !== 'tech-conference-calabar-2025' && p.id !== 'school-tech-storm-2025');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -184,6 +185,48 @@ export default function Home() {
                         ></iframe>
                       )}
                   </div>
+                  </div>
+              </div>
+            )}
+            
+            {schoolTechStorm2025Program && (
+              <div className="relative rounded-lg overflow-hidden bg-background shadow-lg p-8 md:p-12 mb-12">
+                  <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+                  <div className="relative grid md:grid-cols-2 gap-8 items-center">
+                      <div className="text-center md:text-left">
+                          <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary">{schoolTechStorm2025Program.title}</h3>
+                          <p className="mt-4 text-lg text-muted-foreground">
+                          {schoolTechStorm2025Program.description}
+                          </p>
+                          {schoolTechStorm2025Program.details.schools && (
+                            <div className="mt-4">
+                                <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>Schools Involved</h4>
+                                <div className="flex flex-wrap gap-2">
+                                  {schoolTechStorm2025Program.details.schools.map(school => (
+                                    <Badge key={school} variant="secondary">{school}</Badge>
+                                  ))}
+                                </div>
+                            </div>
+                          )}
+                          <div className="mt-6">
+                            {schoolTechStorm2025Program.details.videoUrl && (
+                                <Button asChild size="lg">
+                                    <a href={schoolTechStorm2025Program.details.videoUrl} target="_blank" rel="noopener noreferrer">
+                                        <Video className="mr-2" /> Watch the Recap
+                                    </a>
+                                </Button>
+                            )}
+                          </div>
+                      </div>
+                      <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
+                          <Image
+                            src={schoolTechStorm2025Program.imageUrl}
+                            alt={schoolTechStorm2025Program.title}
+                            data-ai-hint={schoolTechStorm2025Program.imageHint}
+                            fill
+                            className="object-cover"
+                           />
+                      </div>
                   </div>
               </div>
             )}
