@@ -277,7 +277,9 @@ export default function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {featuredEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
+              <div key={event.id} className="mx-auto w-full max-w-lg">
+                <EventCard event={event} />
+              </div>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -300,7 +302,9 @@ export default function Home() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <div key={project.id} className="mx-auto w-full max-w-lg">
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
            <div className="text-center mt-12">
