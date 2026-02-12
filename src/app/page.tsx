@@ -151,7 +151,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="max-w-5xl mx-auto grid gap-8 md:grid-cols-2">
                {pastPrograms.map((program) => (
                   <ProgramCard key={program.id} program={program} />
               ))}

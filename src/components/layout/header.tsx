@@ -15,6 +15,7 @@ const navLinks = [
   { href: '/events', label: 'Events' },
   { href: '/projects', label: 'Projects' },
   { href: '/programs', label: 'Programs' },
+  { href: '/tis', label: 'Tech in School' },
   { href: '/team', label: 'Team' },
   { href: '/contact', label: 'Contact' },
 ];
