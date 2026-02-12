@@ -60,9 +60,6 @@ export default function Home() {
   const featuredMembers = getTeamMembers().slice(0, 4);
   const upcomingPrograms = getUpcomingPrograms();
   const pastPrograms = getPastPrograms();
-  const conferenceProgram = pastPrograms.find(p => p.id === 'tech-conference-calabar-2025');
-  const schoolTechStorm2025Program = pastPrograms.find(p => p.id === 'school-tech-storm-2025');
-  const otherPastPrograms = pastPrograms.filter(p => p.id !== 'tech-conference-calabar-2025' && p.id !== 'school-tech-storm-2025');
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -154,88 +151,9 @@ export default function Home() {
               </p>
             </div>
 
-            {conferenceProgram && (
-              <div className="relative rounded-lg overflow-hidden bg-background shadow-lg p-8 md:p-12 mb-12">
-                  <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                  <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                  <div className="text-center md:text-left">
-                      <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary">{conferenceProgram.title}</h3>
-                      <p className="mt-4 text-lg text-muted-foreground">
-                      {conferenceProgram.description}
-                      </p>
-                      {conferenceProgram.details.date && conferenceProgram.details.location && (
-                      <p className="mt-2 font-semibold text-primary">{conferenceProgram.details.date} | Venue {conferenceProgram.details.location}</p>
-                      )}
-                      <div className="mt-6">
-                      <Button asChild size="lg">
-                          <Link href="https://dev-tcc.netlify.app" target="_blank" rel="noopener noreferrer">
-                          Visit Official Site <ArrowRight className="ml-2" />
-                          </Link>
-                      </Button>
-                      </div>
-                  </div>
-                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
-                      {conferenceProgram.details.videoUrl && (
-                        <iframe
-                          className="absolute top-0 left-0 w-full h-full"
-                          src={conferenceProgram.details.videoUrl}
-                          title={conferenceProgram.title}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      )}
-                  </div>
-                  </div>
-              </div>
-            )}
-            
-            {schoolTechStorm2025Program && (
-              <div className="relative rounded-lg overflow-hidden bg-background shadow-lg p-8 md:p-12 mb-12">
-                  <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                  <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                      <div className="text-center md:text-left">
-                          <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary">{schoolTechStorm2025Program.title}</h3>
-                          <p className="mt-4 text-lg text-muted-foreground">
-                          {schoolTechStorm2025Program.description}
-                          </p>
-                          {schoolTechStorm2025Program.details.schools && (
-                            <div className="mt-4">
-                                <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>Schools Involved</h4>
-                                <div className="flex flex-wrap gap-2">
-                                  {schoolTechStorm2025Program.details.schools.map(school => (
-                                    <Badge key={school} variant="secondary">{school}</Badge>
-                                  ))}
-                                </div>
-                            </div>
-                          )}
-                          <div className="mt-6">
-                            {schoolTechStorm2025Program.details.videoUrl && (
-                                <Button asChild size="lg">
-                                    <a href={schoolTechStorm2025Program.details.videoUrl} target="_blank" rel="noopener noreferrer">
-                                        <Video className="mr-2" /> Watch the Recap
-                                    </a>
-                                </Button>
-                            )}
-                          </div>
-                      </div>
-                      <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
-                          <Image
-                            src={schoolTechStorm2025Program.imageUrl}
-                            alt={schoolTechStorm2025Program.title}
-                            data-ai-hint={schoolTechStorm2025Program.imageHint}
-                            fill
-                            className="object-cover"
-                           />
-                      </div>
-                  </div>
-              </div>
-            )}
-
-            <div className="grid gap-8 justify-center">
-               {otherPastPrograms.map((program) => (
-                  <div key={program.id} className="max-w-xl">
-                      <ProgramCard program={program} />
-                  </div>
+            <div className="grid gap-8 md:grid-cols-2">
+               {pastPrograms.map((program) => (
+                  <ProgramCard key={program.id} program={program} />
               ))}
             </div>
 
