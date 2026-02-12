@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 export default function ContactPage() {
   return (
     <div className="bg-background">
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 lg:py-24">
+      <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6 py-12 md:py-20 lg:py-24">
         <div className="flex flex-col items-center text-center mb-12 md:mb-16">
           <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tight text-primary">
             Get In Touch

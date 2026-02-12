@@ -23,7 +23,7 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
 
   return (
     <div className="bg-background">
-      <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+      <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6 py-12 md:py-16">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
             <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-lg mb-8 shadow-lg">

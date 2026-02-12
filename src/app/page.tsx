@@ -66,7 +66,7 @@ export default function Home() {
       <section className="relative w-full py-24 md:py-32 lg:py-40 bg-card">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <ScrollAnimation>
-        <div className="container mx-auto px-4 md:px-6 text-center relative">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6 text-center relative">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter text-primary">
             Welcome to Calabar Tech Community
           </h1>
@@ -89,7 +89,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
         <section id="upcoming-programs" className="py-20 md:py-28 bg-background">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Upcoming Programs</h2>
               <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -143,7 +143,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
         <section id="past-programs" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Highlights from Past Programs</h2>
               <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -168,7 +168,7 @@ export default function Home() {
       
       <ScrollAnimation>
       <section id="about" className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-6">About Our Community</h2>
@@ -226,7 +226,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
         <section id="journey" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
             <div className="mb-16 md:mb-20">
               <h2 className="text-3xl font-headline font-semibold text-center mb-12">Our Journey 🚀</h2>
               <div className="relative max-w-4xl mx-auto md:space-y-16">
@@ -266,7 +266,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
       <section id="events" className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Featured Events</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -289,7 +289,7 @@ export default function Home() {
       
        <ScrollAnimation animation="fade-in-up">
        <section id="projects" className="py-20 md:py-28 bg-card">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Projects</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -312,7 +312,7 @@ export default function Home() {
       
       <ScrollAnimation animation="fade-in-up">
       <section id="team" className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Meet the Team</h2>
                 <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -335,7 +335,7 @@ export default function Home() {
       
       <ScrollAnimation animation="fade-in-up">
         <section id="faq" className="py-20 md:py-28 bg-card">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">
                 Frequently Asked Questions
@@ -353,7 +353,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
       <section id="contact" className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto px-4 md-px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Get In Touch</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
