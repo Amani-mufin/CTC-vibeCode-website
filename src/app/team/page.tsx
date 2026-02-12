@@ -20,7 +20,7 @@ export default function TeamPage() {
                         The dedicated individuals making the Calabar Tech Community a reality.
                     </p>
                 </div>
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-8 sm:grid-cols-2">
                     {members.map((member) => (
                         <TeamMemberCard key={member.id} member={member} />
                     ))}
@@ -28,7 +28,7 @@ export default function TeamPage() {
 
                 <div className="mt-16 md:mt-20">
                   <h2 className="text-3xl font-headline font-semibold text-center mb-8">Core Volunteers</h2>
-                  <div className="grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-sm mx-auto sm:max-w-none">
+                  <div className="grid justify-center sm:grid-cols-2 gap-8 max-w-sm mx-auto sm:max-w-none">
                     {volunteers.map((volunteer) => (
                       <Card key={volunteer.id} className="text-center flex flex-col items-center p-6 border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
                         <Avatar className="w-24 h-24 mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
