@@ -266,20 +266,21 @@ const volunteers: Volunteer[] = [
   }
 ];
 
+import { estateImage1 } from "@/assets/images";
 const programs: Program[] = [
   {
     id: 'school-tech-storm-2026',
     title: 'School Tech Storm 2026',
     status: 'upcoming',
     description: 'Following the success of the 2025 edition, School Tech Storm is expanding its impact. This 2-day outreach program aims to reach 4-5 schools, introducing students to tech careers, digital skills, and future opportunities in the tech ecosystem.',
-    imageUrl: 'https://picsum.photos/seed/tis2026/600/400',
+    imageUrl: estateImage1.src,
     imageHint: 'students classroom',
     details: {
       schools: ['Targeting 4-5 schools in Cross River State'],
       goal: 'To expose students to real-world tech career paths early, inspire interest in digital skills, and bridge the gap between secondary education and the tech industry.',
       hasVideo: true,
-      videoUrl: 'https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link',
-      date: 'March 23-24, 2026'
+      videoUrl: '/tis',
+      date: 'March 24-25, 2026'
     }
   },
   {

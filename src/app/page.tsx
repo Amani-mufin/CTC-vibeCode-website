@@ -100,7 +100,16 @@ export default function Home() {
               <div key={program.id} className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
                 <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                  <div className="text-center md:text-left">
+                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden md:order-2">
+                    <Image
+                      src={program.imageUrl}
+                      alt={program.title}
+                      data-ai-hint={program.imageHint}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="text-center md:text-left md:order-1">
                     <Badge>Upcoming</Badge>
                     <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary mt-2">{program.title}</h3>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -124,15 +133,6 @@ export default function Home() {
                         </Button>
                       )}
                     </div>
-                  </div>
-                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden">
-                    <Image
-                      src={program.imageUrl}
-                      alt={program.title}
-                      data-ai-hint={program.imageHint}
-                      fill
-                      className="object-cover"
-                    />
                   </div>
                 </div>
               </div>

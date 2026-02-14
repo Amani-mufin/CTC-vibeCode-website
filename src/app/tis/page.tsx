@@ -1,6 +1,7 @@
 import ProgramCard from "@/components/program-card";
 import { getPrograms } from "@/lib/data";
 import Image from 'next/image';
+import {tisImage} from "@/assets/images"
 
 export default function TechInSchoolPage() {
     const allPrograms = getPrograms();
@@ -20,11 +21,12 @@ export default function TechInSchoolPage() {
                     </div>
                     <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
                         <Image 
-                            src="https://res.cloudinary.com/sirsuccess/image/upload/v1759688461/tech-in-school-students.jpg" 
+                            src={tisImage} 
                             alt="Students smiling at a Tech in School event" 
                             data-ai-hint="students smiling"
                             fill
                             className="object-cover"
+                            priority
                         />
                     </div>
                 </div>
