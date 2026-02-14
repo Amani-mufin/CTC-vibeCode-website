@@ -20,9 +20,9 @@ export default function TechInSchoolPage() {
                     </div>
                     <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
                         <Image 
-                            src="https://res.cloudinary.com/sirsuccess/image/upload/v1757839977/m_100_1_zz5rfb.jpg" 
-                            alt="Students in a classroom learning about tech" 
-                            data-ai-hint="students classroom tech"
+                            src="https://res.cloudinary.com/sirsuccess/image/upload/v1759688461/tech-in-school-students.jpg" 
+                            alt="Students smiling at a Tech in School event" 
+                            data-ai-hint="students smiling"
                             fill
                             className="object-cover"
                         />
