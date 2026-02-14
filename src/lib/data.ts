@@ -272,8 +272,8 @@ const programs: Program[] = [
     title: 'School Tech Storm 2026',
     status: 'upcoming',
     description: 'Following the success of the 2025 edition, School Tech Storm is expanding its impact. This 2-day outreach program aims to reach 4-5 schools, introducing students to tech careers, digital skills, and future opportunities in the tech ecosystem.',
-    imageUrl: 'https://res.cloudinary.com/sirsuccess/image/upload/v1759688461/tech-in-school-students.jpg',
-    imageHint: 'students smiling',
+    imageUrl: 'https://picsum.photos/seed/tis2026/600/400',
+    imageHint: 'students classroom',
     details: {
       schools: ['Targeting 4-5 schools in Cross River State'],
       goal: 'To expose students to real-world tech career paths early, inspire interest in digital skills, and bridge the gap between secondary education and the tech industry.',
