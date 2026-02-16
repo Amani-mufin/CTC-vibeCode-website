@@ -12,17 +12,17 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ member }: TeamMemberCardProps) {
   return (
-    <Card className="text-center flex flex-col items-center p-6 border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
+    <Card className="flex flex-col items-center p-6 border-border/50 hover:border-primary/70 hover:shadow-lg transition-all duration-300">
       <Avatar className="w-24 h-24 mb-4 border-2 border-primary/20 group-hover:border-primary/50 transition-colors">
         <AvatarImage src={member.imageUrl} alt={member.name} data-ai-hint={member.imageHint} className="object-cover" />
         <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
       </Avatar>
-      <CardHeader className="p-0">
+      <CardHeader className="p-0 text-center">
         <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
         <CardDescription className="text-primary font-medium">{member.role}</CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow mt-4">
-        <p className="text-sm text-muted-foreground">{member.bio}</p>
+      <CardContent className="flex-grow mt-4 w-full">
+        <p className="text-sm text-muted-foreground text-left">{member.bio}</p>
       </CardContent>
       <CardFooter className="mt-4 p-0">
         <div className="flex items-center gap-1">
