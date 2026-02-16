@@ -26,18 +26,16 @@ export function GetInvolvedModal({ trigger }: { trigger: ReactNode }) {
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-4 py-4">
-          <Button asChild size="lg">
-            <Link href="/contact?subject=TIS%20Sponsorship">
-              Sponsor Our Initiative
-            </Link>
+          <Button size="lg" disabled>
+            Sponsor (Coming Soon)
           </Button>
           <Button asChild size="lg" variant="secondary">
-            <Link href="https://forms.gle/voteForYourSchool" target="_blank" rel="noopener noreferrer">
+            <Link href="https://bit.ly/TIS-Nominate" target="_blank" rel="noopener noreferrer">
               Vote for a School
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link href="https://docs.google.com/forms/d/e/1FAIpQLScy4nFHFFml0N-BN6mxcctqKoqyIF4UwJ1Us-KfLZecn0MpIg/viewform?pli=1" target="_blank" rel="noopener noreferrer">
+            <Link href="https://bit.ly/TIS-volunteer" target="_blank" rel="noopener noreferrer">
               Volunteer
             </Link>
           </Button>
