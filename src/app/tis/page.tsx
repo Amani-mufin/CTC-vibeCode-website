@@ -2,6 +2,8 @@ import ProgramCard from "@/components/program-card";
 import { getPrograms } from "@/lib/data";
 import { tisImage } from "@/assets/images";
 import Image from 'next/image';
+import { GetInvolvedModal } from "@/components/get-involved-modal";
+import { Button } from "@/components/ui/button";
 
 export default function TechInSchoolPage() {
     const allPrograms = getPrograms();
@@ -26,9 +28,9 @@ export default function TechInSchoolPage() {
                         </p>
                     </div>
                      <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
-                       <Image 
-                            src={tisImage} 
-                            alt="Tech in School Initiative" 
+                       <Image
+                            src={tisImage}
+                            alt="Tech in School Initiative"
                             data-ai-hint="students technology"
                             fill
                             className="object-cover"
@@ -37,7 +39,7 @@ export default function TechInSchoolPage() {
                     </div>
                 </div>
 
-                <div className="mb-16 md:mb-20">
+                <div className="my-20 md:my-28">
                     <h2 className="text-3xl font-headline font-semibold text-center mb-4">About the Initiative</h2>
                     <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
                         The Tech in School (TIS) initiative is a core part of Calabar Tech Community's mission. We believe in empowering young minds by exposing them to the world of technology at an early stage. Through programs like our annual "School Tech Storm," we visit secondary schools to demystify tech, introduce clear career paths, and spark curiosity and confidence in students.
