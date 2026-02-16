@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Program } from '@/lib/data';
-import { School, Video, Goal } from 'lucide-react';
+import { School, Video, Goal, Calendar } from 'lucide-react';
 import { Badge } from './ui/badge';
 
 interface ProgramCardProps {
@@ -27,6 +27,12 @@ export default function ProgramCard({ program }: ProgramCardProps) {
         <CardDescription className="pt-2">{program.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow space-y-4">
+        {program.details.date && (
+          <div>
+            <h4 className="font-semibold text-sm mb-2 flex items-center"><Calendar className="mr-2 h-4 w-4 text-primary"/>Date</h4>
+            <p className="text-sm text-muted-foreground">{program.details.date}</p>
+          </div>
+        )}
         {program.details.schools && (
           <div>
             <h4 className="font-semibold text-sm mb-2 flex items-center"><School className="mr-2 h-4 w-4 text-primary"/>School Involvement</h4>
@@ -45,9 +51,8 @@ export default function ProgramCard({ program }: ProgramCardProps) {
       <CardFooter>
         {program.details.hasVideo && program.details.videoUrl && (
             <Button asChild className="w-full">
-                <a href={program.details.videoUrl} target="_blank" rel="noopener noreferrer">
-                    <Video className="mr-2 h-4 w-4" />
-                    Watch the Video
+                <a href={program.details.videoUrl} target={program.id === 'school-tech-storm-2026' ? '_self' : '_blank'} rel="noopener noreferrer">
+                  {program.id === 'school-tech-storm-2026' ? 'Learn More' : <><Video className="mr-2 h-4 w-4" />Watch the Video</>}
                 </a>
             </Button>
         )}

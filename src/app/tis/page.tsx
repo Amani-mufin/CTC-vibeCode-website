@@ -1,7 +1,6 @@
 import ProgramCard from "@/components/program-card";
 import { getPrograms } from "@/lib/data";
-import Image from 'next/image';
-import {tisImage} from "@/assets/images"
+import { GetInvolvedCard } from "@/components/get-involved-card";
 
 export default function TechInSchoolPage() {
     const allPrograms = getPrograms();
@@ -19,15 +18,8 @@ export default function TechInSchoolPage() {
                             Our commitment to nurturing the next generation of tech talent by bringing technology education directly to secondary schools in Calabar.
                         </p>
                     </div>
-                    <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
-                        <Image 
-                            src={tisImage} 
-                            alt="Students smiling at a Tech in School event" 
-                            data-ai-hint="students smiling"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
+                    <div className="h-64 md:h-80 w-full">
+                        <GetInvolvedCard />
                     </div>
                 </div>
 
