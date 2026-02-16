@@ -273,14 +273,14 @@ const programs: Program[] = [
     title: 'School Tech Storm 2026',
     status: 'upcoming',
     description: 'Following the success of the 2025 edition, School Tech Storm is expanding its impact. This 2-day outreach program aims to reach 4-5 schools, introducing students to tech careers, digital skills, and future opportunities in the tech ecosystem.',
-    imageUrl: estateImage1.src,
+    imageUrl: 'https://picsum.photos/seed/school-storm-2026/600/400',
     imageHint: 'students classroom',
     details: {
       schools: ['Targeting 4-5 schools in Cross River State'],
       goal: 'To expose students to real-world tech career paths early, inspire interest in digital skills, and bridge the gap between secondary education and the tech industry.',
       hasVideo: true,
       videoUrl: '/tis',
-      date: 'March 24-25, 2026'
+      date: '24th - 25th March, 2026'
     }
   },
   {
@@ -391,5 +391,6 @@ export function getPastPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
