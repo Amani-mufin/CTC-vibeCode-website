@@ -10,27 +10,14 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
-import { Heart } from 'lucide-react';
+import type { ReactNode } from 'react';
 
-export function GetInvolvedCard() {
+export function GetInvolvedModal({ trigger }: { trigger: ReactNode }) {
   return (
     <Dialog>
-      <Card className="flex flex-col items-center justify-center p-8 text-center h-full bg-primary/5 border-2 border-dashed border-primary/20 hover:border-primary/50 transition-colors duration-300">
-         <Heart className="w-12 h-12 text-primary mb-4" />
-        <CardHeader className="p-0">
-          <CardTitle>Make a Difference</CardTitle>
-          <CardDescription className="mt-2">
-            Join us in empowering the next generation of tech leaders.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="p-0 mt-6">
-          <DialogTrigger asChild>
-            <Button size="lg">Get Involved</Button>
-          </DialogTrigger>
-        </CardContent>
-      </Card>
-      
+      <DialogTrigger asChild>
+        {trigger}
+      </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Get Involved with TIS</DialogTitle>

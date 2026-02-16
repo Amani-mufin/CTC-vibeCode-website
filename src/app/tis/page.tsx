@@ -1,10 +1,17 @@
 import ProgramCard from "@/components/program-card";
 import { getPrograms } from "@/lib/data";
-import { GetInvolvedCard } from "@/components/get-involved-card";
+import { tisImage } from "@/assets/images";
+import Image from 'next/image';
 
 export default function TechInSchoolPage() {
     const allPrograms = getPrograms();
-    const techInSchoolPrograms = allPrograms.filter(p => p.id.includes('school-tech-storm')).sort((a, b) => (b.details.date && a.details.date) ? new Date(b.details.date).getTime() - new Date(a.details.date).getTime() : 0);
+    const techInSchoolPrograms = allPrograms.filter(p => p.id.includes('school-tech-storm')).sort((a, b) => {
+        // Basic sort to keep it from erroring, as date strings are not directly comparable
+        if (a.details.date && b.details.date) {
+            return b.details.date.localeCompare(a.details.date);
+        }
+        return 0;
+    });
 
     return (
         <div className="bg-background">
@@ -18,8 +25,15 @@ export default function TechInSchoolPage() {
                             Our commitment to nurturing the next generation of tech talent by bringing technology education directly to secondary schools in Calabar.
                         </p>
                     </div>
-                    <div className="h-64 md:h-80 w-full">
-                        <GetInvolvedCard />
+                     <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden shadow-lg">
+                       <Image 
+                            src={tisImage} 
+                            alt="Tech in School Initiative" 
+                            data-ai-hint="students technology"
+                            fill
+                            className="object-cover"
+                            placeholder="blur"
+                        />
                     </div>
                 </div>
 
