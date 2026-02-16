@@ -44,6 +44,16 @@ const journeyMilestones = [
     date: 'Present (2025)',
     description: 'Crossed 1,000+ registered members in our growing community.',
   },
+  {
+    date: 'School Tech Storm (2025)',
+    description: 'Our flagship tech awareness program outreach for secondary schools. In 2025, we successfully reached over 400+ SS class students across two schools, improving awareness of tech careers and sparking interest in digital skills.',
+    link:"https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link"
+  },
+  {
+    date: 'Calabar Tech Conference 2025 - 5-6 December 2025',
+    description: 'Calabar Tech Conference is the largest gathering of innovators, tech enthusiasts, startups, and investors in Cross River State, Nigeria',
+    link: "https://calabartechconf.ng/"
+  }
 ];
 
 

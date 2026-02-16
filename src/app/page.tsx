@@ -52,6 +52,16 @@ const journeyMilestones = [
     date: 'Present (2025)',
     description: 'Crossed 1,000+ registered members in our growing community.',
   },
+  {
+    date: 'School Tech Storm (2025)',
+    description: 'Our flagship tech awareness program outreach for secondary schools. In 2025, we successfully reached over 400+ SS class students across two schools, improving awareness of tech careers and sparking interest in digital skills.',
+    link:"https://www.instagram.com/reel/DNTtbYmIwa1/?utm_source=ig_web_copy_link"
+  },
+  {
+    date: 'Calabar Tech Conference 2025 - 5-6 December 2025',
+    description: 'Calabar Tech Conference is the largest gathering of innovators, tech enthusiasts, startups, and investors in Cross River State, Nigeria',
+    link: "https://calabartechconf.ng/"
+  }
 ];
 
 export default function Home() {
@@ -174,11 +184,11 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-6">About Our Community</h2>
-              <p className="mt-4 text-muted-foreground text-lg text-center">
+              <p className="mt-4 text-muted-foreground text-lg text-left">
                 Calabar Tech Community is a vibrant and inclusive space for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We’re dedicated to driving innovation, collaboration, and growth across the local tech ecosystem.
               </p>
               <div className="mt-8 space-y-6">
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Calendar className="h-6 w-6" />
                   </div>
@@ -187,7 +197,7 @@ export default function Home() {
                     <p className="text-muted-foreground">From meetups to hackathons, we host a variety of events to bring the community together.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Code className="h-6 w-6" />
                   </div>
@@ -196,7 +206,7 @@ export default function Home() {
                     <p className="text-muted-foreground">We encourage and support community-led projects that solve real-world problems.</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Users className="h-6 w-6" />
                   </div>
