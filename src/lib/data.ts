@@ -1,4 +1,6 @@
 
+import type { StaticImageData } from 'next/image';
+
 export interface Speaker {
     name: string;
     title: string;
@@ -56,7 +58,7 @@ export interface Program {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   imageHint: string;
   status?: 'upcoming' | 'past';
   details: {
@@ -273,7 +275,7 @@ const programs: Program[] = [
     title: 'School Tech Storm 2026',
     status: 'upcoming',
     description: 'Following the success of the 2025 edition, School Tech Storm is expanding its impact. This 2-day outreach program aims to reach 4-5 schools, introducing students to tech careers, digital skills, and future opportunities in the tech ecosystem.',
-    imageUrl: 'https://picsum.photos/seed/school-storm-2026/600/400',
+    imageUrl: estateImage1,
     imageHint: 'students classroom',
     details: {
       schools: ['Targeting 4-5 schools in Cross River State'],
@@ -391,6 +393,7 @@ export function getPastPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
+
 
 
 
