@@ -12,6 +12,7 @@ import ProjectCard from '@/components/project-card';
 import ProgramCard from '@/components/program-card';
 import { Faq } from '@/components/faq';
 import { Badge } from '@/components/ui/badge';
+import { estateImage1 } from "@/assets/images";
 
 const journeyMilestones = [
   {
@@ -76,7 +77,7 @@ export default function Home() {
       <section className="relative w-full py-24 md:py-32 lg:py-40 bg-card">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
         <ScrollAnimation>
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6 text-center relative">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] text-center relative">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter text-primary">
             Welcome to Calabar Tech Community
           </h1>
@@ -99,7 +100,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
         <section id="upcoming-programs" className="py-20 md:py-28 bg-background">
-          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Upcoming Programs</h2>
               <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -110,16 +111,16 @@ export default function Home() {
               <div key={program.id} className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12">
                 <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
                 <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden md:order-2">
+                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden order-1 md:order-2">
                     <Image
-                      src={program.imageUrl}
+                      src={estateImage1}
                       alt={program.title}
                       data-ai-hint={program.imageHint}
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <div className="text-center md:text-left md:order-1">
+                  <div className="text-center md:text-left order-2 md:order-1">
                     <Badge>Upcoming</Badge>
                     <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary mt-2">{program.title}</h3>
                     <p className="mt-4 text-lg text-muted-foreground">
@@ -153,7 +154,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
         <section id="past-programs" className="py-20 md:py-28 bg-card">
-          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Highlights from Past Programs</h2>
               <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -180,10 +181,10 @@ export default function Home() {
       
       <ScrollAnimation>
       <section id="about" className="py-20 md:py-28 bg-background">
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-6">About Our Community</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-left mb-6">About Our Community</h2>
               <p className="mt-4 text-muted-foreground text-lg text-left">
                 Calabar Tech Community is a vibrant and inclusive space for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We’re dedicated to driving innovation, collaboration, and growth across the local tech ecosystem.
               </p>
@@ -192,7 +193,7 @@ export default function Home() {
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Calendar className="h-6 w-6" />
                   </div>
-                  <div>
+                  <div className="max-w-[400px]">
                     <h3 className="font-semibold text-lg">Regular Events</h3>
                     <p className="text-muted-foreground">From meetups to hackathons, we host a variety of events to bring the community together.</p>
                   </div>
@@ -201,7 +202,7 @@ export default function Home() {
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Code className="h-6 w-6" />
                   </div>
-                  <div>
+                  <div className="max-w-[400px]">
                     <h3 className="font-semibold text-lg">Collaborative Projects</h3>
                     <p className="text-muted-foreground">We encourage and support community-led projects that solve real-world problems.</p>
                   </div>
@@ -210,7 +211,7 @@ export default function Home() {
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Users className="h-6 w-6" />
                   </div>
-                  <div>
+                  <div className="max-w-[400px]">
                     <h3 className="font-semibold text-lg">Mentorship & Growth</h3>
                     <p className="text-muted-foreground">Learn from experienced members and accelerate your career in tech.</p>
                   </div>
@@ -238,7 +239,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
         <section id="journey" className="py-20 md:py-28 bg-card">
-          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
             <div className="mb-16 md:mb-20">
               <h2 className="text-3xl font-headline font-semibold text-center mb-12">Our Journey 🚀</h2>
               <div className="relative max-w-4xl mx-auto md:space-y-16">
@@ -278,7 +279,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
       <section id="events" className="py-20 md:py-28 bg-background">
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Featured Events</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -301,9 +302,9 @@ export default function Home() {
       </section>
       </ScrollAnimation>
       
-       <ScrollAnimation animation="fade-in-up">
+      {/* <ScrollAnimation animation="fade-in-up">
        <section id="projects" className="py-20 md:py-28 bg-card">
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Projects</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -324,11 +325,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      </ScrollAnimation>
+      </ScrollAnimation> */}
       
       <ScrollAnimation animation="fade-in-up">
       <section id="team" className="py-20 md:py-28 bg-background">
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
                 <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Meet the Team</h2>
                 <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
@@ -351,7 +352,7 @@ export default function Home() {
       
       <ScrollAnimation animation="fade-in-up">
         <section id="faq" className="py-20 md:py-28 bg-card">
-          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+          <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
             <div className="flex flex-col items-center text-center mb-12 md:mb-16">
               <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">
                 Frequently Asked Questions
@@ -369,7 +370,7 @@ export default function Home() {
 
       <ScrollAnimation animation="fade-in-up">
       <section id="contact" className="py-20 md:py-28 bg-background">
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6">
+        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
           <div className="flex flex-col items-center text-center mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Get In Touch</h2>
             <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">

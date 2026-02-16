@@ -7,7 +7,7 @@ import Image from 'next/image';
 export function Footer() {
   return (
     <footer className="w-full bg-card border-t">
-      <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] px-4 md:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px] py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground text-center sm:text-left">
          <Link href="/">
            <Image src="/logo.svg" alt="Calabar Tech Community Logo" width={32} height={32} className="h-8 w-auto" />
