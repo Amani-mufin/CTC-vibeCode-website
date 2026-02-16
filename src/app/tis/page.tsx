@@ -41,9 +41,12 @@ export default function TechInSchoolPage() {
 
                 <div className="my-20 md:my-28">
                     <h2 className="text-3xl font-headline font-semibold text-center mb-4">About the Initiative</h2>
-                    <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground text-center">
+                    <div className=" flex justify-center w-full">
+                    <p className="mt-4 max-w-[50rem] text-lg text-muted-foreground text-left">
                         The Tech in School (TIS) initiative is a core part of Calabar Tech Community's mission. We believe in empowering young minds by exposing them to the world of technology at an early stage. Through programs like our annual "School Tech Storm," we visit secondary schools to demystify tech, introduce clear career paths, and spark curiosity and confidence in students.
                     </p>
+                    </div>
+                    
                 </div>
 
                 <div className="mb-12 md:mb-16">
