@@ -113,7 +113,7 @@ export default function Home() {
                 <div className="relative grid md:grid-cols-2 gap-8 items-center">
                   <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden order-1 md:order-2">
                     <Image
-                      src={estateImage1}
+                      src={program.imageUrl}
                       alt={program.title}
                       data-ai-hint={program.imageHint}
                       fill
@@ -184,8 +184,8 @@ export default function Home() {
         <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-left mb-6">About Our Community</h2>
-              <p className="mt-4 text-muted-foreground text-lg text-left">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-center md:text-left mb-6">About Our Community</h2>
+              <p className="mt-4 text-muted-foreground text-lg text-center md:text-left">
                 Calabar Tech Community is a vibrant and inclusive space for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We’re dedicated to driving innovation, collaboration, and growth across the local tech ecosystem.
               </p>
               <div className="mt-8 space-y-6">
@@ -336,7 +336,7 @@ export default function Home() {
                     The dedicated individuals making the Calabar Tech Community a reality.
                 </p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 sm:grid-cols-2">
                 {featuredMembers.map((member) => (
                     <TeamMemberCard key={member.id} member={member} />
                 ))}
