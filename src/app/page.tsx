@@ -132,7 +132,7 @@ export default function Home() {
                     <div className="mt-6">
                       {program.details.videoUrl ? (
                         <Button asChild size="lg">
-                          <Link href={program.details.videoUrl} target="_blank" rel="noopener noreferrer">
+                          <Link href={program.details.videoUrl}>
                             Learn More <ArrowRight className="ml-2" />
                           </Link>
                         </Button>
