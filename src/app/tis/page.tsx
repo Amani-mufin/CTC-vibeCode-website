@@ -2,7 +2,9 @@ import ProgramCard from "@/components/program-card";
 import { getPrograms } from "@/lib/data";
 import { tisImage } from "@/assets/images";
 import Image from 'next/image';
-import { Bot, Cpu, Code, Users } from 'lucide-react';
+import { Bot, Cpu, Code, Users, Heart } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { GetInvolvedModal } from "@/components/get-involved-modal";
 
 export default function TechInSchoolPage() {
     const allPrograms = getPrograms();
@@ -84,6 +86,19 @@ export default function TechInSchoolPage() {
                                 </div>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <div className="py-20 md:py-28 bg-primary/5 rounded-2xl border border-primary/20 text-center px-6 mb-20">
+                    <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mb-6">
+                        <Heart className="h-8 w-8 text-primary" fill="currentColor" />
+                    </div>
+                    <h2 className="text-3xl font-headline font-semibold mb-6">Sponsor or Support TIS</h2>
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                        Join us in our mission to bridge the digital divide. Whether through sponsorship, resources, or your time, your support makes a lasting impact on students' lives and helps us reach more schools across Calabar.
+                    </p>
+                    <div className="flex justify-center">
+                        <GetInvolvedModal trigger={<Button size="lg" className="px-8">Get Involved</Button>} />
                     </div>
                 </div>
 
