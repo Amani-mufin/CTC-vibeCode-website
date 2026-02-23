@@ -2,13 +2,11 @@ import ProgramCard from "@/components/program-card";
 import { getPrograms } from "@/lib/data";
 import { tisImage } from "@/assets/images";
 import Image from 'next/image';
-import { GetInvolvedModal } from "@/components/get-involved-modal";
-import { Button } from "@/components/ui/button";
+import { Bot, Cpu, Code, Users } from 'lucide-react';
 
 export default function TechInSchoolPage() {
     const allPrograms = getPrograms();
     const techInSchoolPrograms = allPrograms.filter(p => p.id.includes('school-tech-storm')).sort((a, b) => {
-        // Basic sort to keep it from erroring, as date strings are not directly comparable
         if (a.details.date && b.details.date) {
             return b.details.date.localeCompare(a.details.date);
         }
@@ -39,14 +37,54 @@ export default function TechInSchoolPage() {
                     </div>
                 </div>
 
-                <div className="my-20 md:my-28">
-                    <h2 className="text-3xl font-headline font-semibold text-center mb-4">About the Initiative</h2>
-                    <div className=" flex justify-center w-full">
-                    <p className="mt-4 max-w-[50rem] text-lg text-muted-foreground text-left">
-                        The Tech in School (TIS) initiative is a core part of Calabar Tech Community's mission. We believe in empowering young minds by exposing them to the world of technology at an early stage. Through programs like our annual "School Tech Storm," we visit secondary schools to demystify tech, introduce clear career paths, and spark curiosity and confidence in students.
-                    </p>
+                <div className="grid lg:grid-cols-2 gap-12 items-start my-20 md:my-28">
+                    <div>
+                        <h2 className="text-3xl font-headline font-semibold mb-6">About the Initiative</h2>
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                            School Tech Storm is a tech outreach initiative designed to introduce secondary school students from SS2 to SS3 to AI, Robotics, tech careers, digital skills, and future opportunities in the tech ecosystem. Following the success of last year’s edition where 2 schools were reached with over 400 students impacted, this year’s edition aims to expand impact by reaching 4–5 schools across a 2-day outreach program.
+                        </p>
                     </div>
-                    
+                    <div className="bg-card p-8 rounded-lg border border-border/50 shadow-sm">
+                        <h2 className="text-2xl font-headline font-semibold mb-6">Core Objectives</h2>
+                        <ul className="space-y-6">
+                            <li className="flex items-start gap-4">
+                                <div className="bg-primary/10 p-2.5 rounded-full mt-1 shrink-0">
+                                    <Bot className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                    <span className="font-semibold block text-lg">Introduction to AI</span>
+                                    <p className="text-muted-foreground">Artificial Intelligence (AI) concepts and their real-world impact.</p>
+                                </div>
+                            </li>
+                             <li className="flex items-start gap-4">
+                                <div className="bg-primary/10 p-2.5 rounded-full mt-1 shrink-0">
+                                    <Cpu className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                    <span className="font-semibold block text-lg">Introduction to Robotics</span>
+                                    <p className="text-muted-foreground">Fundamentals of hardware, automation, and robotics engineering.</p>
+                                </div>
+                            </li>
+                             <li className="flex items-start gap-4">
+                                <div className="bg-primary/10 p-2.5 rounded-full mt-1 shrink-0">
+                                    <Code className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                    <span className="font-semibold block text-lg">Tech Skills & Career Paths</span>
+                                    <p className="text-muted-foreground">Exposure to practical tech skills and diverse career opportunities.</p>
+                                </div>
+                            </li>
+                             <li className="flex items-start gap-4">
+                                <div className="bg-primary/10 p-2.5 rounded-full mt-1 shrink-0">
+                                    <Users className="h-5 w-5 text-primary" />
+                                </div>
+                                <div>
+                                    <span className="font-semibold block text-lg">Direct Mentorship</span>
+                                    <p className="text-muted-foreground">Direct interaction with senior tech leaders and industry mentors.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div className="mb-12 md:mb-16">
