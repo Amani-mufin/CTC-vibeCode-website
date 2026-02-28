@@ -77,6 +77,19 @@ export interface Faq {
 
 const events: Event[] = [
     {
+        id: 'iwd-2025',
+        title: 'IWD 2025: Accelerate Progress',
+        date: '2025-03-08',
+        time: '10:00 AM',
+        location: 'Virtual (Google Meet)',
+        shortDescription: 'Join CTC to celebrate International Women\'s Day 2025 and discuss accelerating progress for women in tech.',
+        description: 'International Women\'s Day (IWD) is a global day celebrating the social, economic, cultural, and political achievements of women. This year, Calabar Tech Community is hosting a virtual event themed "Accelerate Progress". Join us for an inspiring session featuring trailblazing women in the industry sharing their journeys and insights.',
+        imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070&auto=format&fit=crop',
+        imageHint: 'women tech empowerment',
+        speakers: [],
+        resources: 'Register here: https://luma.com/dsuv9xqm'
+    },
+    {
         id: '11',
         title: 'Navigating Your Career as a Techy',
         date: '2024-01-27',
@@ -393,7 +406,3 @@ export function getPastPrograms(): Program[] {
 export function getFaqs(): Faq[] {
   return faqs;
 }
-
-
-
-
