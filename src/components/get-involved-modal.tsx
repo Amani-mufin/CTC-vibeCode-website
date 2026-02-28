@@ -26,8 +26,10 @@ export function GetInvolvedModal({ trigger }: { trigger: ReactNode }) {
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-4 py-4">
-          <Button size="lg" disabled>
-            Sponsor (Coming Soon)
+          <Button size="lg" asChild>
+            <Link href="https://bit.ly/tis_sponsorship" target='_blank' rel="noopener noreferrer">
+                  Sponsor Us
+            </Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
             <Link href="https://bit.ly/TIS-Nominate" target="_blank" rel="noopener noreferrer">
