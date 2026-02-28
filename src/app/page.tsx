@@ -66,7 +66,16 @@ const journeyMilestones = [
 ];
 
 export default function Home() {
-  const featuredEvents = getEvents().slice(0, 3);
+  const allEvents = getEvents();
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Featured events: Up to 3, prioritizing the next upcoming events
+  const featuredEvents = [
+    ...allEvents.filter(e => new Date(e.date) >= today).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()),
+    ...allEvents.filter(e => new Date(e.date) < today).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  ].slice(0, 3);
+
   const featuredProjects = getProjects().slice(0, 3);
   const featuredMembers = getTeamMembers().slice(0, 4);
   const upcomingPrograms = getUpcomingPrograms();
@@ -184,12 +193,12 @@ export default function Home() {
         <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold text-center md:text-left mb-6">About Our Community</h2>
-              <p className="mt-4 text-muted-foreground text-lg text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-6">About Our Community</h2>
+              <p className="mt-4 text-muted-foreground text-lg">
                 Calabar Tech Community is a vibrant and inclusive space for tech enthusiasts, professionals, and learners in Calabar, Nigeria. We’re dedicated to driving innovation, collaboration, and growth across the local tech ecosystem.
               </p>
               <div className="mt-8 space-y-6">
-                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
+                <div className="flex flex-col items-center md:flex-row md:items-start md:text-left gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Calendar className="h-6 w-6" />
                   </div>
@@ -198,7 +207,7 @@ export default function Home() {
                     <p className="text-muted-foreground">From meetups to hackathons, we host a variety of events to bring the community together.</p>
                   </div>
                 </div>
-                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
+                <div className="flex flex-col items-center md:flex-row md:items-start md:text-left gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Code className="h-6 w-6" />
                   </div>
@@ -207,7 +216,7 @@ export default function Home() {
                     <p className="text-muted-foreground">We encourage and support community-led projects that solve real-world problems.</p>
                   </div>
                 </div>
-                <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-4">
+                <div className="flex flex-col items-center md:flex-row md:items-start md:text-left gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full">
                     <Users className="h-6 w-6" />
                   </div>
@@ -217,7 +226,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-                 <div className="text-center mt-10">
+                 <div className="text-center md:text-left mt-10">
                     <Button asChild variant="outline">
                       <Link href="/about">Learn More About Us</Link>
                     </Button>
@@ -240,7 +249,7 @@ export default function Home() {
       <ScrollAnimation animation="fade-in-up">
         <section id="journey" className="py-20 md:py-28 bg-card">
           <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
-            <div className="mb-16 md:mb-20">
+            <div className="mb-0">
               <h2 className="text-3xl font-headline font-semibold text-center mb-12">Our Journey 🚀</h2>
               <div className="relative max-w-4xl mx-auto md:space-y-16">
                 <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border hidden md:block" aria-hidden="true"></div>
@@ -253,7 +262,7 @@ export default function Home() {
                         <div className="relative">
                             <div className="md:hidden absolute -left-4 top-1/2 -translate-y-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
                             <div className="md:hidden absolute -left-6 top-1/2 -translate-y-1/2 w-5 h-5 bg-primary rounded-full ring-4 ring-background"></div>
-                            <div className="p-6 bg-card rounded-lg border shadow-md md:text-left">
+                            <div className="p-6 bg-card rounded-lg border shadow-md text-left">
                                 <h3 className="font-headline font-semibold text-primary">{item.date}</h3>
                                 <p className="text-muted-foreground mt-1">{item.description}</p>
                                 {item.link && (
@@ -302,31 +311,6 @@ export default function Home() {
       </section>
       </ScrollAnimation>
       
-      {/* <ScrollAnimation animation="fade-in-up">
-       <section id="projects" className="py-20 md:py-28 bg-card">
-        <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
-          <div className="flex flex-col items-center text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold tracking-tight">Community Projects</h2>
-            <p className="mt-4 max-w-2xl text-lg md:text-xl text-muted-foreground">
-              Discover innovative projects built by our talented community members.
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {featuredProjects.map((project) => (
-              <div key={project.id} className="mx-auto w-full max-w-lg">
-                <ProjectCard project={project} />
-              </div>
-            ))}
-          </div>
-           <div className="text-center mt-12">
-            <Button asChild variant="outline">
-              <Link href="/projects">Explore All Projects</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-      </ScrollAnimation> */}
-      
       <ScrollAnimation animation="fade-in-up">
       <section id="team" className="py-20 md:py-28 bg-background">
         <div className="w-[90%] md:w-4/5 mx-auto max-w-[1440px]">
@@ -336,7 +320,7 @@ export default function Home() {
                     The dedicated individuals making the Calabar Tech Community a reality.
                 </p>
             </div>
-            <div className="grid gap-8 sm:grid-cols-2">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto">
                 {featuredMembers.map((member) => (
                     <TeamMemberCard key={member.id} member={member} />
                 ))}

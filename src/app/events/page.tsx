@@ -9,8 +9,16 @@ export default function EventsPage() {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    const upcomingEvents = allEvents.filter(event => new Date(event.date) >= today);
-    const pastEvents = allEvents.filter(event => new Date(event.date) < today);
+    // Filter and sort events
+    // Upcoming: Chronological (soonest first)
+    const upcomingEvents = allEvents
+        .filter(event => new Date(event.date) >= today)
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+    // Past: Reverse Chronological (most recent first)
+    const pastEvents = allEvents
+        .filter(event => new Date(event.date) < today)
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return (
         <div className="bg-background">
