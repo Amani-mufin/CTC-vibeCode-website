@@ -1,9 +1,12 @@
+
 import { getEventById, getEvents } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, Clock, MapPin, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const events = getEvents();
@@ -20,6 +23,7 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
   }
 
   const eventDate = new Date(event.date);
+  const isUpcoming = eventDate >= new Date(new Date().setHours(0, 0, 0, 0));
 
   return (
     <div className="bg-background">
@@ -60,6 +64,13 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
                     </div>
                 </div>
             )}
+
+            {event.resources && (
+                <div className="mb-8">
+                    <h2 className="text-2xl font-headline font-semibold mb-4">Resources</h2>
+                    <p className="text-muted-foreground">{event.resources}</p>
+                </div>
+            )}
           </div>
           <div className="lg:col-span-1 space-y-6">
             <Card>
@@ -88,6 +99,16 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
                     <p className="text-muted-foreground">{event.location}</p>
                   </div>
                 </div>
+
+                {isUpcoming && event.registrationUrl && (
+                  <div className="pt-4">
+                    <Button asChild className="w-full" size="lg">
+                      <Link href={event.registrationUrl} target="_blank" rel="noopener noreferrer">
+                        Register Now <ExternalLink className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
 

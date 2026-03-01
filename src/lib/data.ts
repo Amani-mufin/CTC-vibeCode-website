@@ -20,6 +20,7 @@ export interface Event {
     imageHint: string;
     speakers: Speaker[];
     resources: string;
+    registrationUrl?: string;
 }
 
 export interface Project {
@@ -80,14 +81,15 @@ const events: Event[] = [
         id: 'iwd-2025',
         title: 'IWD 2025: Accelerate Progress',
         date: '2025-03-08',
-        time: '10:00 AM',
+        time: '10:00 AM - 12:00 PM',
         location: 'Virtual (Google Meet)',
-        shortDescription: 'Join CTC to celebrate International Women\'s Day 2025 and discuss accelerating progress for women in tech.',
-        description: 'International Women\'s Day (IWD) is a global day celebrating the social, economic, cultural, and political achievements of women. This year, Calabar Tech Community is hosting a virtual event themed "Accelerate Progress". Join us for an inspiring session featuring trailblazing women in the industry sharing their journeys and insights.',
+        shortDescription: 'Celebrate International Women\'s Day 2025 with CTC as we discuss strategies to accelerate progress for women in the technology ecosystem.',
+        description: 'International Women\'s Day (IWD) is a global day celebrating the social, economic, cultural, and political achievements of women. This year, Calabar Tech Community is hosting a high-impact virtual session themed "Accelerate Progress". We will dive into actionable insights on leadership, technical growth, and building inclusive spaces that empower women to thrive in tech.',
         imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070&auto=format&fit=crop',
         imageHint: 'women tech empowerment',
         speakers: [],
-        resources: 'Register here: https://luma.com/dsuv9xqm'
+        resources: 'Check out our past IWD events on our social media channels.',
+        registrationUrl: 'https://luma.com/dsuv9xqm'
     },
     {
         id: '11',
