@@ -80,7 +80,7 @@ const events: Event[] = [
     {
         id: 'iwd-2025',
         title: 'IWD 2025: Accelerate Progress',
-        date: '2025-03-08',
+        date: '2026-03-08',
         time: '10:00 AM - 12:00 PM',
         location: 'Virtual (Google Meet)',
         shortDescription: 'Celebrate International Women\'s Day 2025 with CTC as we discuss strategies to accelerate progress for women in the technology ecosystem.',
@@ -294,7 +294,7 @@ const programs: Program[] = [
     imageHint: 'women tech empowerment',
     details: {
       goal: 'Empowering women and accelerating progress in tech.',
-      date: '8th March, 2025',
+      date: '8th March, 2026',
       location: 'Virtual (Google Meet)',
       hasVideo: false,
       videoUrl: 'https://luma.com/dsuv9xqm'
@@ -412,7 +412,11 @@ export function getPrograms(): Program[] {
 }
 
 export function getUpcomingPrograms(): Program[] {
-    return programs.filter(p => p.status === 'upcoming');
+    return programs.filter(p => p.status === 'upcoming').sort((a, b) => {
+      const dateA = a.details.date ? new Date(a.details.date.split(',')[1]?.trim() || a.details.date) : new Date(0);
+      const dateB = b.details.date ? new Date(b.details.date.split(',')[1]?.trim() || b.details.date) : new Date(0);
+      return dateA.getTime() - dateB.getTime();
+    });
 }
 
 export function getPastPrograms(): Program[] {
