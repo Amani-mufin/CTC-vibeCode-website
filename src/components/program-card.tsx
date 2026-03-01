@@ -1,8 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import type { Program } from '@/lib/data';
-import { School, Video, Goal, Calendar } from 'lucide-react';
+import { School, Video, Goal, Calendar, ExternalLink } from 'lucide-react';
 import { Badge } from './ui/badge';
 import { GetInvolvedModal } from './get-involved-modal';
 
@@ -54,10 +56,14 @@ export default function ProgramCard({ program }: ProgramCardProps) {
           <GetInvolvedModal
             trigger={<Button className="w-full">Get Involved</Button>}
           />
-        ) : program.details.hasVideo && program.details.videoUrl ? (
+        ) : program.details.videoUrl ? (
             <Button asChild className="w-full">
                 <a href={program.details.videoUrl} target="_blank" rel="noopener noreferrer">
-                  <Video className="mr-2 h-4 w-4" />Watch the Video
+                  {program.details.hasVideo ? (
+                    <><Video className="mr-2 h-4 w-4" />Watch the Video</>
+                  ) : (
+                    <>Register Now <ExternalLink className="ml-2 h-4 w-4" /></>
+                  )}
                 </a>
             </Button>
         ) : null}
