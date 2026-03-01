@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -116,47 +117,49 @@ export default function Home() {
                 Don&apos;t miss our next big initiatives.
               </p>
             </div>
-            {upcomingPrograms.map((program) => (
-              <div key={program.id} className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12">
-                <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-                <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                  <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden order-1 md:order-2">
-                    <Image
-                      src={program.imageUrl}
-                      alt={program.title}
-                      data-ai-hint={program.imageHint}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="text-center md:text-left order-2 md:order-1">
-                    <Badge>Upcoming</Badge>
-                    <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary mt-2">{program.title}</h3>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                      {program.description}
-                    </p>
-                    {program.details.date && (
-                      <p className="mt-2 font-semibold text-primary">{program.details.date}</p>
-                    )}
-                    <div className="mt-6">
-                      {program.details.videoUrl ? (
-                        <Button asChild size="lg">
-                          <Link href={program.details.videoUrl}>
-                            Learn More <ArrowRight className="ml-2" />
-                          </Link>
-                        </Button>
-                      ) : (
-                        <Button asChild size="lg">
-                          <Link href="/programs">
-                            Program Details <ArrowRight className="ml-2" />
-                          </Link>
-                        </Button>
-                      )}
+            <div className="space-y-12">
+                {upcomingPrograms.map((program) => (
+                <div key={program.id} className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12 border border-border/50">
+                    <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+                    <div className="relative grid md:grid-cols-2 gap-8 items-center">
+                    <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden order-1 md:order-2">
+                        <Image
+                        src={program.imageUrl}
+                        alt={program.title}
+                        data-ai-hint={program.imageHint}
+                        fill
+                        className="object-cover"
+                        />
                     </div>
-                  </div>
+                    <div className="text-center md:text-left order-2 md:order-1">
+                        <Badge>Upcoming</Badge>
+                        <h3 className="text-3xl md:text-4xl font-headline font-bold text-primary mt-2">{program.title}</h3>
+                        <p className="mt-4 text-lg text-muted-foreground">
+                        {program.description}
+                        </p>
+                        {program.details.date && (
+                        <p className="mt-2 font-semibold text-primary">{program.details.date}</p>
+                        )}
+                        <div className="mt-6">
+                        {program.details.videoUrl ? (
+                            <Button asChild size="lg">
+                            <Link href={program.details.videoUrl}>
+                                Learn More <ArrowRight className="ml-2" />
+                            </Link>
+                            </Button>
+                        ) : (
+                            <Button asChild size="lg">
+                            <Link href="/programs">
+                                Program Details <ArrowRight className="ml-2" />
+                            </Link>
+                            </Button>
+                        )}
+                        </div>
+                    </div>
+                    </div>
                 </div>
-              </div>
-            ))}
+                ))}
+            </div>
           </div>
         </section>
       </ScrollAnimation>

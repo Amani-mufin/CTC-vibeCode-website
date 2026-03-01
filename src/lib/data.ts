@@ -286,6 +286,21 @@ const volunteers: Volunteer[] = [
 import { estateImage1 } from "@/assets/images";
 const programs: Program[] = [
   {
+    id: 'iwd-2025-program',
+    title: 'IWD 2025: Accelerate Progress',
+    status: 'upcoming',
+    description: 'Celebrate International Women\'s Day 2025 with CTC as we discuss strategies to accelerate progress for women in the technology ecosystem.',
+    imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070&auto=format&fit=crop',
+    imageHint: 'women tech empowerment',
+    details: {
+      goal: 'Empowering women and accelerating progress in tech.',
+      date: '8th March, 2025',
+      location: 'Virtual (Google Meet)',
+      hasVideo: false,
+      videoUrl: 'https://luma.com/dsuv9xqm'
+    }
+  },
+  {
     id: 'school-tech-storm-2026',
     title: 'School Tech Storm 2026',
     status: 'upcoming',
