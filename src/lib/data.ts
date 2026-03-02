@@ -76,6 +76,7 @@ export interface Faq {
   answer: string;
 }
 
+import {  womensDay2026 } from "@/assets/images";
 const events: Event[] = [
     {
         id: 'iwd-2025',
@@ -85,7 +86,7 @@ const events: Event[] = [
         location: 'Virtual',
         shortDescription: 'Celebrate International Women\'s Day 2026 with CTC as we discuss the theme "Give to Gain" for women in the technology ecosystem.',
         description: 'International Women\'s Day (IWD) is a global day celebrating the social, economic, cultural, and political achievements of women. This year, Calabar Tech Community is hosting a high-impact virtual session themed "Give to Gain". We will dive into actionable insights on leadership, technical growth, and building inclusive spaces that empower women to thrive in tech.',
-        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1741193155/e87e6ccb-bc3b-4177-af31-9257d0fbe04c.png',
+        imageUrl:womensDay2026.src,
         imageHint: 'women tech event',
         speakers: [],
         resources: 'Check out our past IWD events on our social media channels.',
@@ -283,14 +284,14 @@ const volunteers: Volunteer[] = [
   }
 ];
 
-import { estateImage1 } from "@/assets/images";
+import { estateImage1,  } from "@/assets/images";
 const programs: Program[] = [
   {
     id: 'iwd-2025-program',
     title: 'IWD 2026: Give to Gain',
     status: 'upcoming',
     description: 'Celebrate International Women\'s Day 2026 with CTC as we discuss the theme "Give to Gain" for women in the technology ecosystem.',
-    imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1741193155/e87e6ccb-bc3b-4177-af31-9257d0fbe04c.png',
+    imageUrl: womensDay2026,
     imageHint: 'women tech event',
     details: {
       goal: 'Empowering women with the "Give to Gain" philosophy in tech.',

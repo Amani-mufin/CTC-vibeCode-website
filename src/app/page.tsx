@@ -122,13 +122,14 @@ export default function Home() {
                 <div key={program.id} className="relative rounded-lg overflow-hidden bg-card shadow-lg p-8 md:p-12 border border-border/50">
                     <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
                     <div className="relative grid md:grid-cols-2 gap-8 items-center">
-                    <div className="relative h-64 md:h-80 w-full rounded-lg overflow-hidden order-1 md:order-2">
+                    <div className="relative h-64 sm:h-80 w-full rounded-lg overflow-hidden order-1 md:order-2">
                         <Image
                         src={program.imageUrl}
                         alt={program.title}
                         data-ai-hint={program.imageHint}
                         fill
-                        className="object-cover"
+                        className={`${program.title.toLowerCase().includes('iwd 2026')} object-cover
+                          `}
                         />
                     </div>
                     <div className="text-center md:text-left order-2 md:order-1">
