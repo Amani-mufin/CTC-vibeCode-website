@@ -79,17 +79,17 @@ export interface Faq {
 const events: Event[] = [
     {
         id: 'iwd-2025',
-        title: 'IWD 2025: Accelerate Progress',
+        title: 'IWD 2026: Give to Gain',
         date: '2026-03-08',
-        time: '10:00 AM - 12:00 PM',
-        location: 'Virtual (Google Meet)',
-        shortDescription: 'Celebrate International Women\'s Day 2025 with CTC as we discuss strategies to accelerate progress for women in the technology ecosystem.',
-        description: 'International Women\'s Day (IWD) is a global day celebrating the social, economic, cultural, and political achievements of women. This year, Calabar Tech Community is hosting a high-impact virtual session themed "Accelerate Progress". We will dive into actionable insights on leadership, technical growth, and building inclusive spaces that empower women to thrive in tech.',
-        imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070&auto=format&fit=crop',
-        imageHint: 'women tech empowerment',
+        time: '5:00 PM WAT',
+        location: 'Virtual',
+        shortDescription: 'Celebrate International Women\'s Day 2026 with CTC as we discuss the theme "Give to Gain" for women in the technology ecosystem.',
+        description: 'International Women\'s Day (IWD) is a global day celebrating the social, economic, cultural, and political achievements of women. This year, Calabar Tech Community is hosting a high-impact virtual session themed "Give to Gain". We will dive into actionable insights on leadership, technical growth, and building inclusive spaces that empower women to thrive in tech.',
+        imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1741193155/e87e6ccb-bc3b-4177-af31-9257d0fbe04c.png',
+        imageHint: 'women tech event',
         speakers: [],
         resources: 'Check out our past IWD events on our social media channels.',
-        registrationUrl: 'https://luma.com/dsuv9xqm'
+        registrationUrl: 'https://bit.ly/CTC_IWD-registration'
     },
     {
         id: '11',
@@ -287,17 +287,17 @@ import { estateImage1 } from "@/assets/images";
 const programs: Program[] = [
   {
     id: 'iwd-2025-program',
-    title: 'IWD 2025: Accelerate Progress',
+    title: 'IWD 2026: Give to Gain',
     status: 'upcoming',
-    description: 'Celebrate International Women\'s Day 2025 with CTC as we discuss strategies to accelerate progress for women in the technology ecosystem.',
-    imageUrl: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2070&auto=format&fit=crop',
-    imageHint: 'women tech empowerment',
+    description: 'Celebrate International Women\'s Day 2026 with CTC as we discuss the theme "Give to Gain" for women in the technology ecosystem.',
+    imageUrl: 'https://res.cloudinary.com/dedjhsw2k/image/upload/v1741193155/e87e6ccb-bc3b-4177-af31-9257d0fbe04c.png',
+    imageHint: 'women tech event',
     details: {
-      goal: 'Empowering women and accelerating progress in tech.',
+      goal: 'Empowering women with the "Give to Gain" philosophy in tech.',
       date: '8th March, 2026',
-      location: 'Virtual (Google Meet)',
+      location: 'Virtual',
       hasVideo: false,
-      videoUrl: 'https://luma.com/dsuv9xqm'
+      videoUrl: 'https://bit.ly/CTC_IWD-registration'
     }
   },
   {
