@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { parseDate, startOfDay } from "@/lib/date";
 
 export async function generateStaticParams() {
   const events = getEvents();
@@ -15,15 +16,17 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function EventDetailPage({ params }: { params: { id: string } }) {
-  const event = getEventById(params.id);
+export default async function EventDetailPage({ params }: { params: { id: string } }) {
+  const event = getEventById(await params.id);
 
   if (!event) {
     notFound();
   }
 
-  const eventDate = new Date(event.date);
-  const isUpcoming = eventDate >= new Date(new Date().setHours(0, 0, 0, 0));
+  const eventDate = parseDate(event.date);
+  const isUpcoming = eventDate
+    ? startOfDay(eventDate).getTime() >= startOfDay(new Date()).getTime()
+    : false;
 
   return (
     <div className="bg-background">
@@ -82,7 +85,16 @@ export default function EventDetailPage({ params }: { params: { id: string } }) 
                   <Calendar className="h-5 w-5 mr-3 mt-1 text-primary" />
                   <div>
                     <p className="font-semibold">Date</p>
-                    <p className="text-muted-foreground">{eventDate.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                    <p className="text-muted-foreground">
+                      {eventDate
+                        ? eventDate.toLocaleDateString('en-US', {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                          })
+                        : event.date}
+                    </p>
                   </div>
                 </div>
                  <div className="flex items-start">
