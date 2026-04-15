@@ -69,7 +69,7 @@ const journeyMilestones = [
     link: "https://www.instagram.com/reel/DNTtbYmIwa1",
   },
   {
-    date: "Present (2025)",
+    date: "2025",
     description: "Crossed 1,000+ registered members in our growing community.",
   },
   {
@@ -81,8 +81,19 @@ const journeyMilestones = [
   {
     date: "Calabar Tech Conference 2025 - 5-6 December 2025",
     description:
-      "Calabar Tech Conference is the largest gathering of innovators, tech enthusiasts, startups, and investors in Cross River State, Nigeria",
+      "Calabar Tech Conference was the largest gathering of innovators, tech enthusiasts, startups, and investors in Cross River State, Nigeria.",
     link: "https://calabartechconf.ng/",
+  },
+  {
+    date: "8th March 2026",
+    description:
+      "Hosted IWD 2026: Give to Gain, celebrating women in tech with a virtual session on leadership, technical growth, and inclusive spaces.",
+  },
+  {
+    date: "24th - 25th March 2026",
+    description:
+      "Expanded School Tech Storm outreach to 4-5 schools, introducing more students to tech careers, digital skills, and future opportunities.",
+    link: "https://www.instagram.com/reel/DW8JzAegeLX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
 ];
 
